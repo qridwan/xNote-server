@@ -1,16 +1,3 @@
 =======================================
-connect with remote mysql server::
 
-run the CMD:
-$ ssh -f vgoblcqw@server299.web-hosting.com -p21098 -L 5522:127.0.0.1:3306 -N 
-+++pass: this.main69R62n63#
-$ mysql -h 127.0.0.1 -P 5522 vgoblcqw_userify -p -u vgoblcqw_userify 
-+++pass: userify@123
-?? (doesnt have "mysql" in your linux machine?)
-
-run:: 
-$ sudo apt update
-$ sudo apt install mysql-client
-
-retry.
 ===========================================

@@ -1,4 +1,4 @@
-# **Note Taking Application (XNote)**
+# **Note Taking Application, Backend Service (XNote)**
 
 Digital platform that allows users to create, manage, and organize text-based notes. It provides users with the ability to create, edit, categorize, and search for notes, making it easy to capture and retrieve information efficiently. 
 

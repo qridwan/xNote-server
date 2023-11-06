@@ -1,6 +1,8 @@
-# xNote server application
+# xNote application Backend Service
 
-1. **Note Taking Application (XNote)**
+## [API Documentation](https://documenter.getpostman.com/view/15074292/2s9YXfcimY#22177e0b-79c1-499f-ad21-a4e7deb0b6cf)
+
+1. **Smart Note Taking Application**
 
 Digital platform that allows users to create, manage, and organize text-based notes. It provides users with the ability to create, edit, categorize, and search for notes, making it easy to capture and retrieve information efficiently.
 

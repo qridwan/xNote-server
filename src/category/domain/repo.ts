@@ -32,8 +32,6 @@ const deletecategory = async (category_id: string) => {
  */
 
 const create = async (category: categoryType) => {
-  console.log("category: ", category);
-
   //   check category.name and category.user_id is already there or not
   const existingcategory = await client.raw(
     "select categories.id from categories where name = ? and user_id = ?",

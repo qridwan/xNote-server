@@ -32,8 +32,6 @@ const deletenotebook = async (notebook_id: string) => {
  */
 
 const create = async (notebook: notebookType) => {
-  console.log("notebook: ", notebook);
-
   //   check notebook.name and notebook.user_id is already there or not
   const existingnotebook = await client.raw(
     "select notebooks.id from notebooks where name = ? and user_id = ?",

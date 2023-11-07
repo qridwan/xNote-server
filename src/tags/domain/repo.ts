@@ -29,8 +29,6 @@ const deletetag = async (tag_id: string) => {
  */
 
 const create = async (tag: tagType) => {
-  console.log("tag: ", tag);
-
   //   check tag.name and tag.user_id is already there or not
   const existingtag = await client.raw(
     "select tags.id from tags where name = ? and user_id = ? and note_id = ?",

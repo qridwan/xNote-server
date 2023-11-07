@@ -50,7 +50,6 @@ const create = async (trash: trashType) => {
 };
 
 const deletePermenently = async (trash: trashType) => {
-  console.log("trash: ", trash);
   const trashId = trash.id;
 
   // delete the trash item permanently

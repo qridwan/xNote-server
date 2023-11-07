@@ -37,7 +37,6 @@ const validateSchemas =
 
       next();
     } catch (e) {
-      console.log(e);
       const error = /(?<=\")(.*?)(?=\")/g.exec(e.message)[0];
 
       res.status(400).json({
@@ -63,7 +62,6 @@ const validateJWT = (
   //   const token = req.headers["x-token"];
 
   const token = req.headers.authorization;
-  console.log("token: ", token);
   if (!token) {
     return res.status(400).json({
       status: "Error",

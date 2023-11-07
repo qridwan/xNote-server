@@ -42,7 +42,6 @@ const create = async (note: noteType) => {
 };
 
 const edit = async (note: noteType) => {
-  console.log("note: ", note);
   // Make sure you have the `id` of the note you want to edit.
   const noteId = note.id;
 
@@ -51,7 +50,6 @@ const edit = async (note: noteType) => {
     "select notes.id from notes where id = ?",
     [noteId]
   );
-  console.log("existingNote: ", existingNote);
 
   if (existingNote[0].length === 0) {
     // Handle the case where the note with the given `id` doesn't exist.

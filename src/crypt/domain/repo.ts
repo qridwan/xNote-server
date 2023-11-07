@@ -57,8 +57,9 @@ const generateJWT = (
       },
       (error: jwt.JsonWebTokenError, token: string) => {
         if (error) {
-          console.log(error);
-          rej("Couldn't generate token. Please contact an Admin");
+          rej(
+            "Couldn't generate token. Please contact an Admin" + error.message
+          );
         } else res(token);
       }
     );

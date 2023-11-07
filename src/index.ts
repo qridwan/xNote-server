@@ -6,6 +6,7 @@ import notes from "./notes/controllers/route";
 import tags from "./tags/controllers/route";
 import categories from "./category/controllers/route";
 import notebooks from "./notebook/controllers/route";
+import trash from "./trash/controllers/route";
 
 //Initialize .env
 require("dotenv").config();
@@ -22,6 +23,7 @@ app.use("/api/notes/", Middlewares.validateJWT, notes); //Notes
 app.use("/api/tags/", Middlewares.validateJWT, tags); //Tags
 app.use("/api/category/", Middlewares.validateJWT, categories); //Categories
 app.use("/api/notebooks/", Middlewares.validateJWT, notebooks); //Notebooks / Folder
+app.use("/api/trash/", Middlewares.validateJWT, trash); //Trash box
 app.get("/test", (req, res) => {
   client
     .select("*")

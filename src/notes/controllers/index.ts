@@ -16,7 +16,7 @@ const createNote = async (req: express.Request, res: express.Response) => {
     const note = await Notes.createNote(req.body, id);
     status.successResponse(res, note, "Note created successfully");
   } catch (error) {
-    status.errorResponse(res, "Error getting notes.");
+    status.errorResponse(res, "Error getting notes." + error.message);
   }
 };
 /**
@@ -32,7 +32,7 @@ const editNote = async (req: express.Request, res: express.Response) => {
     const note = await Notes.editNote(req.body, id);
     status.successResponse(res, note, "Note updated successfully");
   } catch (error) {
-    status.errorResponse(res, "Error editing notes.");
+    status.errorResponse(res, "Error editing notes." + error.message);
   }
 };
 
@@ -48,7 +48,10 @@ const getNotes = async (req: express.Request, res: express.Response) => {
     const note = await Notes.getNotes(id);
     status.successResponse(res, note, "Notes retrieved successfully");
   } catch (error) {
-    status.errorResponse(res, "Error creating note. Please contact an admin.");
+    status.errorResponse(
+      res,
+      "Error creating note. Please contact an admin." + error.message
+    );
   }
 };
 /**
@@ -63,7 +66,10 @@ const deleteNote = async (req: express.Request, res: express.Response) => {
     const note = await Notes.deleteNote(noteId);
     status.successResponse(res, note, "Notes successfully deleted");
   } catch (error) {
-    status.errorResponse(res, "Error creating note. Please contact an admin.");
+    status.errorResponse(
+      res,
+      "Error deleting note. Please contact an admin." + error.message
+    );
   }
 };
 

@@ -1,14 +1,16 @@
 import client from "../../database/knex";
 import { noteType } from "../validations/types";
+
 /**
  * @description This function retrieve one user from the database having given user_id;
  * @param {string} user_id
  * @returns the found user
  */
 const myNotes = async (user_id: string) => {
+  // exclude that note_id and user_id is in the trash box
   const res = await client.raw(
-    "select * from notes where user_id = ? order by update_time desc",
-    user_id
+    "SELECT n.* FROM notes n LEFT JOIN trash t ON n.id = t.note_id AND t.user_id = ? WHERE n.user_id = ? AND t.id IS NULL ORDER BY n.update_time DESC",
+    [user_id, user_id]
   );
   return res[0];
 };

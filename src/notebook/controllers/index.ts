@@ -47,10 +47,7 @@ const getnotebooks = async (req: express.Request, res: express.Response) => {
     const notebook = await notebooks.getnotebooks(id);
     status.successResponse(res, notebook, "notebooks retrieved successfully");
   } catch (error) {
-    status.errorResponse(
-      res,
-      "Error creating notebook. Please contact an admin."
-    );
+    status.errorResponse(res, "Error creating notebook. " + error.message);
   }
 };
 /**
@@ -67,7 +64,7 @@ const deletenotebook = async (req: express.Request, res: express.Response) => {
   } catch (error) {
     status.errorResponse(
       res,
-      "Error creating notebook. Please contact an admin."
+      "Error creating notebook:" + error.message + ". Please contact an admin."
     );
   }
 };

@@ -27,7 +27,7 @@ const signup = async (user: UserRegister) => {
     [user.username, user.email, user.password]
   );
   const data = await client.raw(
-    "select username, email, password from users where id = ?",
+    "select username, email, password,id from users where id = ?",
     [ResultSetHeader.insertId]
   );
   return await data[0][0];

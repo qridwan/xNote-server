@@ -35,7 +35,8 @@ const login = async (req: express.Request, res: express.Response) => {
 
     const token = await crypt.generateJWT(
       userFounded.email,
-      userFounded.username
+      userFounded.username,
+      userFounded.id
     );
     status.successResponse(
       res,
@@ -113,7 +114,7 @@ const register = async (req: express.Request, res: express.Response) => {
     });
 
     // console.log("userFounded: ", userFounded, req.body, user);
-    const token = await crypt.generateJWT(user.email, user.username);
+    const token = await crypt.generateJWT(user.email, user.username, user.id);
     delete user.password;
     status.successResponse(res, {
       ...user,
@@ -132,9 +133,9 @@ const register = async (req: express.Request, res: express.Response) => {
  * @returns
  */
 const renewToken = async (req: express.Request, res: express.Response) => {
-  const { username, email } = req.body;
+  const { username, email, id } = req.body;
   try {
-    const token = await crypt.generateJWT(username, email);
+    const token = await crypt.generateJWT(email, username, id);
     return status.successResponse(
       res,
       { token, username, email },

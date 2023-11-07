@@ -2,6 +2,10 @@ import express from "express";
 import { Middlewares } from "./middlewares";
 import client from "./database/knex";
 import auth from "./auth/controllers/route";
+import notes from "./notes/controllers/route";
+import tags from "./tags/controllers/route";
+import categories from "./category/controllers/route";
+import notebooks from "./notebook/controllers/route";
 
 //Initialize .env
 require("dotenv").config();
@@ -14,6 +18,10 @@ app.use(express.json());
 
 //Initialize app endpoints
 app.use("/api/auth/", auth); //authentication
+app.use("/api/notes/", Middlewares.validateJWT, notes); //Notes
+app.use("/api/tags/", Middlewares.validateJWT, tags); //Tags
+app.use("/api/category/", Middlewares.validateJWT, categories); //Categories
+app.use("/api/notebooks/", Middlewares.validateJWT, notebooks); //Notebooks / Folder
 app.get("/test", (req, res) => {
   client
     .select("*")

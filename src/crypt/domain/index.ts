@@ -27,9 +27,9 @@ const comparePassword = async (userPassword: string, toCompare: string) => {
  * @param user_id
  * @returns
  */
-const generateJWT = async (email: string, user_id: string) => {
+const generateJWT = async (email: string, username: string, id: string) => {
   // if (iduser < 0) return Promise.resolve(null);
-  return await cryptRepository.generateJWT(email, user_id);
+  return await cryptRepository.generateJWT(email, username, id);
 };
 
 export const crypt = {

@@ -1,7 +1,7 @@
 import joi from "joi";
-import express, { RequestHandler } from "express";
+import express from "express";
 import JoiErrors from "../types/JoiErrors";
-import jwt, { JsonWebTokenError, JwtPayload } from "jsonwebtoken";
+import jwt, { JwtPayload } from "jsonwebtoken";
 import { JoiAlter } from "../types/JoiAlter";
 require("dotenv").config();
 
@@ -60,8 +60,10 @@ const validateJWT = (
   res: express.Response,
   next: express.NextFunction
 ) => {
-  const token = req.headers["x-token"];
+  //   const token = req.headers["x-token"];
 
+  const token = req.headers.authorization;
+  console.log("token: ", token);
   if (!token) {
     return res.status(400).json({
       status: "Error",
@@ -70,12 +72,13 @@ const validateJWT = (
   }
 
   try {
-    const { email, username } = jwt.verify(
+    const { email, username, id } = jwt.verify(
       token as string,
       process.env.SECRET_KEY
     ) as JwtPayload;
-    req.body.email = email;
-    req.body.username = username;
+    // req.body.email = email;
+    // req.body.username = username;
+    // req.body.id = id;
   } catch (error) {
     return res.status(400).json({
       status: "Error",

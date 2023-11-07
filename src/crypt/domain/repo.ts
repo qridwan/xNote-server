@@ -38,17 +38,22 @@ const comparePassword = async (
  * @returns {Promise<string>} JWT Token
  */
 
-const generateJWT = (email: string, id: string): Promise<string> =>
+const generateJWT = (
+  email: string,
+  username: string,
+  id: string
+): Promise<string> =>
   new Promise((res, rej) => {
     const payload = {
       email,
+      username,
       id,
     };
     jwt.sign(
       payload,
       process.env.SECRET_KEY,
       {
-        expiresIn: "10h",
+        expiresIn: "12h",
       },
       (error: jwt.JsonWebTokenError, token: string) => {
         if (error) {

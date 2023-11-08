@@ -48,8 +48,7 @@ const create = async (notebook: notebookType) => {
   const data = await client.raw("select * from notebooks where user_id = ?", [
     notebook.user_id,
   ]);
-  return await data[0];
-};
+  return await data[0]};
 
 const edit = async (notebook: notebookType) => {
   const notebookId = notebook.id;

@@ -9,7 +9,7 @@ import { noteType } from "../validations/types";
 const myNotes = async (user_id: string) => {
   // exclude that note_id and user_id is in the trash box
   const res = await client.raw(
-    "SELECT n.* FROM notes n LEFT JOIN trash t ON n.id = t.note_id AND t.user_id = ? WHERE n.user_id = ? AND t.id IS NULL ORDER BY n.update_time DESC",
+    "SELECT n.*, c.name as category_name, nb.name as notebook_name FROM notes n LEFT JOIN trash t ON n.id = t.note_id AND t.user_id = ? LEFT JOIN categories c ON n.category_id = c.id LEFT JOIN notebooks nb ON n.notebook_id = nb.id WHERE n.user_id = ? AND t.id IS NULL ORDER BY n.update_time DESC",
     [user_id, user_id]
   );
   return res[0];

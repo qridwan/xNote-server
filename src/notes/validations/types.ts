@@ -8,4 +8,5 @@ export type noteType = {
   user_id?: string;
   id?: string | number;
   category?: string;
+  color?: string;
 };

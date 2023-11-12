@@ -31,12 +31,14 @@ app.get("/test", (req, res) => {
     .select("*")
     .from("notes")
     .then((sc) => {
-      res.status(200).json("Database connected, notes count = " + sc?.length);
+      res
+        .status(200)
+        .json("Database connected ✅, notes count = " + sc?.length);
     })
     .catch((error) => {
       console.log(error);
 
-      res.send("An error occurred while querying the database: " + error);
+      res.send("⚠️ An error occurred while querying the database: " + error);
     });
 });
 

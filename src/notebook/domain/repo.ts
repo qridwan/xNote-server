@@ -41,14 +41,15 @@ const create = async (notebook: notebookType) => {
     throw new Error("notebook already exists");
   }
 
-  await client.raw("insert into notebooks (name,  user_id) values (?, ?)", [
-    notebook.name,
-    notebook.user_id,
-  ]);
+  await client.raw(
+    "insert into notebooks (name,  user_id, icon) values (?, ?, ?)",
+    [notebook.name, notebook.user_id, notebook.icon]
+  );
   const data = await client.raw("select * from notebooks where user_id = ?", [
     notebook.user_id,
   ]);
-  return await data[0]};
+  return await data[0];
+};
 
 const edit = async (notebook: notebookType) => {
   const notebookId = notebook.id;

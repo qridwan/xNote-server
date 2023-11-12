@@ -7,6 +7,7 @@ import tags from "./tags/controllers/route";
 import categories from "./category/controllers/route";
 import notebooks from "./notebook/controllers/route";
 import trash from "./trash/controllers/route";
+import cors from "cors";
 
 //Initialize .env
 require("dotenv").config();
@@ -16,6 +17,7 @@ const app = express();
 
 //Initialize json parser
 app.use(express.json());
+app.use(cors());
 
 //Initialize app endpoints
 app.use("/api/auth/", auth); //authentication
@@ -33,9 +35,10 @@ app.get("/test", (req, res) => {
     })
     .catch((error) => {
       console.log(error);
-      res.send("An error occurred while querying the database");
+
+      res.send("An error occurred while querying the database: " + error);
     });
-}); //User
+});
 
 //Start to listen to server port
 app.listen(process.env.PORT || 8080, () => {

@@ -6,8 +6,9 @@ import { trashType } from "../validations/types";
  * @returns the found user
  */
 const mytrash = async (user_id: string) => {
+  // Get the notes inside the trash and fetch the notes from the database notes table matched with user_id
   const res = await client.raw(
-    "select * from trash where user_id = ? order by deleted_at desc",
+    "select *,trash.deleted_at, trash.id as trash_id from notes inner join trash on notes.id = trash.note_id where trash.user_id = ?",
     user_id
   );
   return res[0];
@@ -19,6 +20,7 @@ const mytrash = async (user_id: string) => {
  */
 const deletetrash = async (trash_id: string) => {
   const res = await client.raw("delete from trash where id = ?", trash_id);
+
   return res[0];
 };
 

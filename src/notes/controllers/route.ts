@@ -17,6 +17,8 @@ notes.patch(
   Middlewares.validateSchemas<noteType>(noteEditSchema),
   notesController.editNote
 );
+notes.get("/notebook/:id", notesController.notesByFolder);
 notes.get("/", notesController.getNotes);
 notes.delete("/:id", notesController.deleteNote);
+notes.get("/:id", notesController.getSingleNote);
 export default notes;

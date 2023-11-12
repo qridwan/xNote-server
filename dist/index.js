@@ -27,7 +27,7 @@ app.use("/api/tags/", middlewares_1.Middlewares.validateJWT, route_3.default); /
 app.use("/api/category/", middlewares_1.Middlewares.validateJWT, route_4.default); //Categories
 app.use("/api/notebooks/", middlewares_1.Middlewares.validateJWT, route_5.default); //Notebooks / Folder
 app.use("/api/trash/", middlewares_1.Middlewares.validateJWT, route_6.default); //Trash box
-app.get("/test", (req, res) => {
+app.get("/db-ping", (req, res) => {
     knex_1.default
         .select("*")
         .from("notes")

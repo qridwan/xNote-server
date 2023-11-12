@@ -26,7 +26,7 @@ app.use("/api/tags/", Middlewares.validateJWT, tags); //Tags
 app.use("/api/category/", Middlewares.validateJWT, categories); //Categories
 app.use("/api/notebooks/", Middlewares.validateJWT, notebooks); //Notebooks / Folder
 app.use("/api/trash/", Middlewares.validateJWT, trash); //Trash box
-app.get("/test", (req, res) => {
+app.get("/db-ping", (req, res) => {
   client
     .select("*")
     .from("notes")

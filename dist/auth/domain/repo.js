@@ -16,7 +16,7 @@ exports.authRepository = void 0;
 const knex_1 = __importDefault(require("../../database/knex"));
 /**
  * @description This function retrieve one user from the database having given user_id;
- * @param {string} user_id
+ * @param {string} key
  * @returns the found user
  */
 const find = (key) => knex_1.default

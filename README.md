@@ -1,6 +1,7 @@
 # xNote application Backend Service
 
 ## [API Documentation](https://documenter.getpostman.com/view/15074292/2s9YXfcimY#22177e0b-79c1-499f-ad21-a4e7deb0b6cf)
+## [LIVE](https://xnote.qridwan.com)
 
 1. **Smart Note Taking Application**
 

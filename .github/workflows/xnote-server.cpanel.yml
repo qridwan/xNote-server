@@ -20,8 +20,14 @@ jobs:
     steps:
     - name: Get latest code
 
+
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       uses: actions/checkout@v2
+
+    - name: Install dependencies and build
+      run: |
+        yarn
+        yarn build
 
     - name: Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.1.0

@@ -3,7 +3,7 @@ import { UserRegister } from "../validations/types";
 
 /**
  * @description This function retrieve one user from the database having given user_id;
- * @param {string} user_id
+ * @param {string} key
  * @returns the found user
  */
 const find = (key: string) =>

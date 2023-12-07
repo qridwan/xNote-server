@@ -63,9 +63,9 @@ const validateJWT = (
 
   const token = req.headers.authorization;
   if (!token) {
-    return res.status(400).json({
+    return res.status(403).json({
       status: "Error",
-      ErrorMessage: "Please send a token in the request",
+      ErrorMessage: "Please send token in the request",
     });
   }
 
@@ -78,7 +78,7 @@ const validateJWT = (
     // req.body.username = username;
     // req.body.id = id;
   } catch (error) {
-    return res.status(400).json({
+    return res.status(403).json({
       status: "Error",
       ErrorMessage: "Please send a valid token in the request",
     });

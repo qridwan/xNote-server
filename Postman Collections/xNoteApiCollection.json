@@ -1380,7 +1380,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"name\": \"Mail\",\n    \"icon\": \"🪤\"\n}",
+							"raw": "{\n    \"note_id\": 59,\n    \"user_id\": 25,\n    \"id\": 67\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1389,68 +1389,7 @@
 						},
 						"url": "{{baseUrl}}/trash/create"
 					},
-					"response": [
-						{
-							"id": "7b9c6953-e31f-41c5-aee9-4382d11053b5",
-							"name": "Create Notebook",
-							"originalRequest": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Authorization",
-										"value": "{{Authorization}}",
-										"type": "text"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n    \"name\": \"Personal\"\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": "{{baseUrl}}/notebooks/create"
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "X-Powered-By",
-									"value": "Express"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json; charset=utf-8"
-								},
-								{
-									"key": "Content-Length",
-									"value": "111"
-								},
-								{
-									"key": "ETag",
-									"value": "W/\"6f-uM1p1dfvs6JIpiiiElWZjFwhzZE\""
-								},
-								{
-									"key": "Date",
-									"value": "Tue, 07 Nov 2023 20:50:01 GMT"
-								},
-								{
-									"key": "Connection",
-									"value": "keep-alive"
-								},
-								{
-									"key": "Keep-Alive",
-									"value": "timeout=5"
-								}
-							],
-							"cookie": [],
-							"responseTime": null,
-							"body": "{\n    \"status\": \"Success\",\n    \"message\": \"notebook created successfully\",\n    \"data\": [\n        {\n            \"id\": 2,\n            \"name\": \"Personal\",\n            \"user_id\": 23\n        }\n    ]\n}"
-						}
-					]
+					"response": []
 				},
 				{
 					"name": "Delete A Trash Permanently",
@@ -1472,7 +1411,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"note_id\": 67,\n    \"user_id\": 25\n}",
+							"raw": "{\n    \"note_id\": 59,\n    \"user_id\": 25,\n    \"id\": 67\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1481,7 +1420,72 @@
 						},
 						"url": "{{baseUrl}}/trash/permenent-delete"
 					},
-					"response": []
+					"response": [
+						{
+							"id": "fd09a0e9-8f0d-49c2-89ef-e3918a3aa1c4",
+							"name": "Delete A Trash Permanently",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{Authorization}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"note_id\": 59,\n    \"user_id\": 25,\n    \"id\": 67\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseUrl}}/trash/permenent-delete"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "110"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"6e-A5S7H6EoZlMj7u2OE+zv84kIIxo\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 13 Feb 2024 19:42:01 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"status\": \"Success\",\n    \"message\": \"trash item clered successfully\",\n    \"data\": {\n        \"message\": \"trash deleted permanently\"\n    }\n}"
+						}
+					]
 				},
 				{
 					"name": "Get all Trash",
@@ -1654,8 +1658,8 @@
 					},
 					"response": [
 						{
-							"id": "30248c69-2ec2-4364-acbf-22568087fbcf",
-							"name": "delete notebook",
+							"id": "1135f9a0-bce9-41a9-a1fa-51e5dd956dda",
+							"name": "Delete All Trash Permanently",
 							"originalRequest": {
 								"method": "DELETE",
 								"header": [
@@ -1666,7 +1670,7 @@
 										"type": "text"
 									}
 								],
-								"url": "{{baseUrl}}/notebooks/4"
+								"url": "{{baseUrl}}/trash/permanent-delete-all"
 							},
 							"status": "OK",
 							"code": 200,
@@ -1677,20 +1681,24 @@
 									"value": "Express"
 								},
 								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
 									"key": "Content-Type",
 									"value": "application/json; charset=utf-8"
 								},
 								{
 									"key": "Content-Length",
-									"value": "162"
+									"value": "120"
 								},
 								{
 									"key": "ETag",
-									"value": "W/\"a2-z7j80CtZjHddEffOAUQVhIER/sg\""
+									"value": "W/\"78-WixqrXN31QUtyMwm4lZ1/1KgHqY\""
 								},
 								{
 									"key": "Date",
-									"value": "Tue, 07 Nov 2023 20:54:54 GMT"
+									"value": "Tue, 13 Feb 2024 19:43:10 GMT"
 								},
 								{
 									"key": "Connection",
@@ -1703,7 +1711,7 @@
 							],
 							"cookie": [],
 							"responseTime": null,
-							"body": "{\n    \"status\": \"Success\",\n    \"message\": \"notebooks successfully deleted\",\n    \"data\": {\n        \"fieldCount\": 0,\n        \"affectedRows\": 1,\n        \"insertId\": 0,\n        \"info\": \"\",\n        \"serverStatus\": 2,\n        \"warningStatus\": 0\n    }\n}"
+							"body": "{\n    \"status\": \"Success\",\n    \"message\": \"All trash items deleted successfully\",\n    \"data\": {\n        \"message\": \"All trash deleted permanently\"\n    }\n}"
 						}
 					]
 				}

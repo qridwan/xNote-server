@@ -58,10 +58,21 @@ const deletePermenently = (trash) => __awaiter(void 0, void 0, void 0, function*
     yield knex_1.default.raw("delete from notes where id = ?", trash.note_id);
     return { message: "trash deleted permanently" };
 });
+const deleteAllPermanently = (userId) => __awaiter(void 0, void 0, void 0, function* () {
+    // getting all the trash items of the user
+    const mytrashNotes = yield knex_1.default.raw("select *, trash.id as trash_id from notes inner join trash on notes.id = trash.note_id where trash.user_id = ?", userId);
+    // delete all the trash items permanently
+    yield mytrashNotes[0].forEach((note) => __awaiter(void 0, void 0, void 0, function* () {
+        yield knex_1.default.raw("delete from trash where id = ?", note.trash_id);
+        yield knex_1.default.raw("delete from notes where id = ?", note.note_id);
+    }));
+    return { message: "All trash deleted permanently" };
+});
 exports.trashRepository = {
     mytrash,
     create,
     deletetrash,
     deletePermenently,
+    deleteAllPermanently,
 };
 //# sourceMappingURL=repo.js.map

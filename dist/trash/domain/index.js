@@ -38,10 +38,20 @@ const permenentDelete = (trash, user_id) => {
     //Here goes the logic
     return repo_1.trashRepository.deletePermenently(Object.assign(Object.assign({}, trash), { user_id: user_id }));
 };
+/**
+ * @description This function is the validation layer of the function of the same name in repo.ts
+ * @param {number} user_id
+ * @returns
+ */
+const permanentDeleteAll = (user_id) => {
+    //Here goes the logic
+    return repo_1.trashRepository.deleteAllPermanently(user_id);
+};
 exports.trash = {
     gettrash,
     createtrash,
     deletetrash,
     permenentDelete,
+    permanentDeleteAll,
 };
 //# sourceMappingURL=index.js.map

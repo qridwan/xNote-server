@@ -61,9 +61,26 @@ const deletePermenently = async (trash: trashType) => {
   return { message: "trash deleted permanently" };
 };
 
+const deleteAllPermanently = async (userId: number) => {
+  // getting all the trash items of the user
+  const mytrashNotes = await client.raw(
+    "select *, trash.id as trash_id from notes inner join trash on notes.id = trash.note_id where trash.user_id = ?",
+    userId
+  );
+
+  // delete all the trash items permanently
+  await mytrashNotes[0].forEach(async (note: any) => {
+    await client.raw("delete from trash where id = ?", note.trash_id);
+    await client.raw("delete from notes where id = ?", note.note_id);
+  });
+
+  return { message: "All trash deleted permanently" };
+};
+
 export const trashRepository = {
   mytrash,
   create,
   deletetrash,
   deletePermenently,
+  deleteAllPermanently,
 };

@@ -1,0 +1,2137 @@
+{
+	"info": {
+		"_postman_id": "d1569783-1b45-4bf6-8bdd-34d82972556e",
+		"name": "xNote server application",
+		"description": "1. **Smart Note Taking Application (XNote)**\n    \n\nDigital platform that allows users to create, manage, and organize text-based notes. It provides users with the ability to create, edit, categorize, and search for notes, making it easy to capture and retrieve information efficiently.\n\n##### FRONTEND: [https://xnote.qridwan.com](https://xnote.qridwan.com)\n\n**2\\. Features:**\n\n- User Registration and Login:\n    - Users can create accounts and log in securely.\n- Create and Edit Notes:\n    - Users can create new text-based notes.\n    - Notes can be edited and updated as needed.\n- Note Organization:\n    - Users can organize their notes into notebooks or folders.\n    - Notes can have tags for easy categorization.\n- Attachments:\n    - Users can attach files (e.g., images, documents) to their notes.\n- Trash and Recovery:\n    - Deleted notes are moved to the trash and can be recovered.\n- Sharing:\n    - Users can share notes with others.\n    - Collaborative note editing and commenting.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "create new user",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "0bc54065-f536-4bd2-8949-659a75a6649a",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "37658013-37b5-4e36-8fee-b1e0e2959632",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"admin\",\n    \"email\": \"admin@ddgmail.com\",\n    \"password\": \"123abc\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseUrl}}/auth/register",
+						"description": "Gets information about the authenticated user."
+					},
+					"response": [
+						{
+							"id": "b98f220a-a583-4c95-a8cf-a2ad10f93bb4",
+							"name": "create new user",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"username\": \"ridwan3\",\n    \"email\": \"sdfsassdfasdfdfsasdfdssdf@ddgmail.com\",\n    \"password\": \"123abc\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseUrl}}/auth/register"
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "76"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"4c-oaJoPvXXeA4un45tFzTkL/IIYkY\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 06 Nov 2023 22:14:42 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"status\": \"Error\",\n    \"message\": \"An user already exist with that email address\"\n}"
+						}
+					]
+				},
+				{
+					"name": "user login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "0bc54065-f536-4bd2-8949-659a75a6649a",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "5911d979-fd36-4489-85a1-8a0f8279d89c",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"rid1@gmail.com\",\n    \"password\": \"123abc\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseUrl}}/auth/login",
+						"description": "Gets information about the authenticated user."
+					},
+					"response": [
+						{
+							"id": "7693bdd2-c55c-4fa0-845e-8255088056bf",
+							"name": "login user",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"sdfsassdfasdfdfsasdfdssdf@ddgmail.com\",\n    \"password\": \"123abc\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseUrl}}/auth/login"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "488"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1e8-ir7CDf/kzgcJcNX0N1AxwLp4PD8\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 06 Nov 2023 22:28:58 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"status\": \"Success\",\n    \"message\": \"User authenticated successfully\",\n    \"data\": {\n        \"id\": 19,\n        \"create_time\": \"2023-11-06T22:09:49.000Z\",\n        \"username\": \"ridwan3\",\n        \"email\": \"sdfsassdfasdfdfsasdfdssdf@ddgmail.com\",\n        \"password\": \"$2a$10$oLJODK2sL7YhWfr5MyGmv..Od/3qxvGkyGG47Mdt2l759t13aKgky\",\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNkZnNhc3NkZmFzZGZkZnNhc2RmZHNzZGZAZGRnbWFpbC5jb20iLCJpZCI6InJpZHdhbjMiLCJpYXQiOjE2OTkzMDk3MzgsImV4cCI6MTY5OTM0NTczOH0.d8q-9oW9NcAf44Caii-vIC7zKSrI11GYLMZw_IuaHHQ\"\n    }\n}"
+						}
+					]
+				}
+			],
+			"id": "22177e0b-79c1-499f-ad21-a4e7deb0b6cf",
+			"description": "The `/me` endpoints let you manage information about the authenticated user."
+		},
+		{
+			"name": "Notes",
+			"item": [
+				{
+					"name": "Create Note",
+					"id": "6e36f18b-7012-4993-9f75-dc38ac948c11",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{Authorization}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"content\": \"this is 2ss3\",\n    \"title\": \"test title 23\",\n    \"notebook_id\": null\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseUrl}}/notes/create"
+					},
+					"response": [
+						{
+							"id": "41def821-c9e5-4ca8-9039-7c5a9523e168",
+							"name": "Create Note",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJpZDFAZGRnbWFpbC5jb20iLCJ1c2VybmFtZSI6InJpZDEiLCJpZCI6MjMsImlhdCI6MTY5OTM3NDY5NCwiZXhwIjoxNjk5NDE3ODk0fQ.d1tTNSeS6nRwDWUQKt5S6pxNU1gzeezMGVlhEDYuBjA",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"content\": \"this is content\",\n    \"title\": \"test title\",\n    \"notebook_id\": null\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseUrl}}/notes/create"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "237"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"ed-KBZASqtL40VLiISMg2gE1Ji3cpk\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 07 Nov 2023 16:41:50 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"status\": \"Success\",\n    \"message\": \"Note created successfully\",\n    \"data\": {\n        \"id\": 2,\n        \"create_time\": \"2023-11-07T16:41:50.000Z\",\n        \"update_time\": \"2023-11-07T16:41:50.000Z\",\n        \"title\": \"test title\",\n        \"content\": \"this is content\",\n        \"user_id\": 23,\n        \"notebook_id\": null\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Note Copy",
+					"id": "dbda3b0b-ed2b-4d18-9f55-6a454df0ece0",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{Authorization}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 4,\n    \"title\": \"updated title\",\n    \"content\": \"this is updated content\",\n    \"notebook_id\": null\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseUrl}}/notes/edit"
+					},
+					"response": [
+						{
+							"id": "d9105908-5392-4d82-a963-f81b441632eb",
+							"name": "Create Note Copy",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{Authorization}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\": 4,\n    \"title\": \"updated title\",\n    \"content\": \"this is updated content\",\n    \"notebook_id\": null\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseUrl}}/notes/edit"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "248"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"f8-EIHILu4hV0HVA9eXUeN1+XgbX7I\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 07 Nov 2023 18:56:00 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"status\": \"Success\",\n    \"message\": \"Note updated successfully\",\n    \"data\": {\n        \"id\": 4,\n        \"create_time\": \"2023-11-07T16:50:44.000Z\",\n        \"update_time\": \"2023-11-07T18:56:00.000Z\",\n        \"title\": \"updated title\",\n        \"content\": \"this is updated content\",\n        \"user_id\": 23,\n        \"notebook_id\": null\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "get notes",
+					"id": "601a2369-83fd-413a-a5b4-ce8db4d64f29",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{Authorization}}",
+								"type": "text"
+							}
+						],
+						"url": "{{baseUrl}}/notes"
+					},
+					"response": [
+						{
+							"id": "9c1b05a6-07e0-4fd4-b62a-cd5db9d78110",
+							"name": "get notes",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{Authorization}}",
+										"type": "text"
+									}
+								],
+								"url": "{{baseUrl}}/notes"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "754"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2f2-SEubujmrhDEaUZkS4jKkFZVZdfk\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 07 Nov 2023 18:22:21 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"status\": \"Success\",\n    \"message\": \"Notes retrieved successfully\",\n    \"data\": [\n        {\n            \"id\": 5,\n            \"create_time\": \"2023-11-07T16:52:52.000Z\",\n            \"update_time\": \"2023-11-07T16:52:52.000Z\",\n            \"title\": \"hello world\",\n            \"content\": \"test content\",\n            \"user_id\": 23,\n            \"notebook_id\": null\n        },\n        {\n            \"id\": 4,\n            \"create_time\": \"2023-11-07T16:50:44.000Z\",\n            \"update_time\": \"2023-11-07T16:50:44.000Z\",\n            \"title\": \"test title 23\",\n            \"content\": \"this is 2ss3\",\n            \"user_id\": 23,\n            \"notebook_id\": null\n        },\n        {\n            \"id\": 3,\n            \"create_time\": \"2023-11-07T16:50:05.000Z\",\n            \"update_time\": \"2023-11-07T16:50:05.000Z\",\n            \"title\": \"test title 23\",\n            \"content\": \"this is 23\",\n            \"user_id\": 23,\n            \"notebook_id\": null\n        },\n        {\n            \"id\": 2,\n            \"create_time\": \"2023-11-07T16:41:50.000Z\",\n            \"update_time\": \"2023-11-07T16:41:50.000Z\",\n            \"title\": \"test title\",\n            \"content\": \"this is content\",\n            \"user_id\": 23,\n            \"notebook_id\": null\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "get notes Copy",
+					"id": "1cdee6ed-111a-4cfe-be53-e0c1a371a3f4",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{Authorization}}",
+								"type": "text"
+							}
+						],
+						"url": "{{baseUrl}}/notes/notebook/7"
+					},
+					"response": [
+						{
+							"id": "d8228d4e-57fd-49e1-84c4-a93e10700d3a",
+							"name": "get notes",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{Authorization}}",
+										"type": "text"
+									}
+								],
+								"url": "{{baseUrl}}/notes"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "754"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2f2-SEubujmrhDEaUZkS4jKkFZVZdfk\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 07 Nov 2023 18:22:21 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"status\": \"Success\",\n    \"message\": \"Notes retrieved successfully\",\n    \"data\": [\n        {\n            \"id\": 5,\n            \"create_time\": \"2023-11-07T16:52:52.000Z\",\n            \"update_time\": \"2023-11-07T16:52:52.000Z\",\n            \"title\": \"hello world\",\n            \"content\": \"test content\",\n            \"user_id\": 23,\n            \"notebook_id\": null\n        },\n        {\n            \"id\": 4,\n            \"create_time\": \"2023-11-07T16:50:44.000Z\",\n            \"update_time\": \"2023-11-07T16:50:44.000Z\",\n            \"title\": \"test title 23\",\n            \"content\": \"this is 2ss3\",\n            \"user_id\": 23,\n            \"notebook_id\": null\n        },\n        {\n            \"id\": 3,\n            \"create_time\": \"2023-11-07T16:50:05.000Z\",\n            \"update_time\": \"2023-11-07T16:50:05.000Z\",\n            \"title\": \"test title 23\",\n            \"content\": \"this is 23\",\n            \"user_id\": 23,\n            \"notebook_id\": null\n        },\n        {\n            \"id\": 2,\n            \"create_time\": \"2023-11-07T16:41:50.000Z\",\n            \"update_time\": \"2023-11-07T16:41:50.000Z\",\n            \"title\": \"test title\",\n            \"content\": \"this is content\",\n            \"user_id\": 23,\n            \"notebook_id\": null\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "get single note",
+					"id": "e563f35e-1585-4589-b3e0-eb7ff6501223",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{Authorization}}",
+								"type": "text"
+							}
+						],
+						"url": "{{baseUrl}}/notes/23"
+					},
+					"response": [
+						{
+							"id": "5b883374-20fc-4484-9a0f-274de5259b99",
+							"name": "get notes",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{Authorization}}",
+										"type": "text"
+									}
+								],
+								"url": "{{baseUrl}}/notes"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "754"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2f2-SEubujmrhDEaUZkS4jKkFZVZdfk\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 07 Nov 2023 18:22:21 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"status\": \"Success\",\n    \"message\": \"Notes retrieved successfully\",\n    \"data\": [\n        {\n            \"id\": 5,\n            \"create_time\": \"2023-11-07T16:52:52.000Z\",\n            \"update_time\": \"2023-11-07T16:52:52.000Z\",\n            \"title\": \"hello world\",\n            \"content\": \"test content\",\n            \"user_id\": 23,\n            \"notebook_id\": null\n        },\n        {\n            \"id\": 4,\n            \"create_time\": \"2023-11-07T16:50:44.000Z\",\n            \"update_time\": \"2023-11-07T16:50:44.000Z\",\n            \"title\": \"test title 23\",\n            \"content\": \"this is 2ss3\",\n            \"user_id\": 23,\n            \"notebook_id\": null\n        },\n        {\n            \"id\": 3,\n            \"create_time\": \"2023-11-07T16:50:05.000Z\",\n            \"update_time\": \"2023-11-07T16:50:05.000Z\",\n            \"title\": \"test title 23\",\n            \"content\": \"this is 23\",\n            \"user_id\": 23,\n            \"notebook_id\": null\n        },\n        {\n            \"id\": 2,\n            \"create_time\": \"2023-11-07T16:41:50.000Z\",\n            \"update_time\": \"2023-11-07T16:41:50.000Z\",\n            \"title\": \"test title\",\n            \"content\": \"this is content\",\n            \"user_id\": 23,\n            \"notebook_id\": null\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "delete note",
+					"id": "882f56be-4f8c-4ba4-acb4-ec76e0315a1a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"warning": "This is a duplicate header and will be overridden by the Authorization header generated by Postman.",
+								"key": "Authorization",
+								"value": "{{Authorization}}",
+								"type": "text"
+							}
+						],
+						"url": "{{baseUrl}}/notes/5"
+					},
+					"response": [
+						{
+							"id": "9343f913-6812-4c2f-9ce7-14da6477f2f1",
+							"name": "get notes Copy",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"warning": "This is a duplicate header and will be overridden by the Authorization header generated by Postman.",
+										"key": "Authorization",
+										"value": "{{Authorization}}",
+										"type": "text"
+									}
+								],
+								"url": "{{baseUrl}}/notes/5"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "160"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"a0-T8rBZKMx5EotyBizePuc6KaO/JQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 07 Nov 2023 18:29:23 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"status\": \"Success\",\n    \"message\": \"Notes retrieved successfully\",\n    \"data\": {\n        \"fieldCount\": 0,\n        \"affectedRows\": 1,\n        \"insertId\": 0,\n        \"info\": \"\",\n        \"serverStatus\": 2,\n        \"warningStatus\": 0\n    }\n}"
+						}
+					]
+				}
+			],
+			"id": "4528e968-fa6c-4458-9c91-79a030df945c",
+			"description": "Note Schema:\n\n`{ content: string; title: string; notebook_id: string; user_id: string; id: string | number; category: string;};`"
+		},
+		{
+			"name": "Tags",
+			"item": [
+				{
+					"name": "Create Tags",
+					"id": "8c45b046-2941-4b7e-9cf4-f93be3d73aa2",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{Authorization}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Programming\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseUrl}}/tags/create"
+					},
+					"response": [
+						{
+							"id": "d3c6c953-8ad6-4ae2-9627-f0f6c6d9a9aa",
+							"name": "Create Tag",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{Authorization}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Programming\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseUrl}}/tags/create"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "67"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"43-zgHMFNCWFmB+4/zsVnR5vINeETc\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 07 Nov 2023 20:12:08 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"status\": \"Success\",\n    \"message\": \"tag created successfully\",\n    \"data\": []\n}"
+						}
+					]
+				},
+				{
+					"name": "Edit Tag",
+					"id": "85a03bee-2d8c-4061-b4fd-f47ad4f21e95",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{Authorization}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 4,\n    \"name\": \"Polymer\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseUrl}}/tags/edit"
+					},
+					"response": [
+						{
+							"id": "2fe2c8b6-6e90-4202-8953-90b57f2cb5ed",
+							"name": "Edit Tag",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{Authorization}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\": 4,\n    \"name\": \"Polymer\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseUrl}}/tags/edit"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "159"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"9f-sVKkW/DOIDg+0NPZDjd53f/r3mg\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 07 Nov 2023 20:12:49 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"status\": \"Success\",\n    \"message\": \"tag updated successfully\",\n    \"data\": {\n        \"id\": 4,\n        \"create_time\": \"2023-11-07T19:39:23.000Z\",\n        \"name\": \"Polymer\",\n        \"note_id\": null,\n        \"user_id\": 23\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "get tags",
+					"id": "6b87ed64-104a-4609-a55b-8325c3701957",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{Authorization}}",
+								"type": "text"
+							}
+						],
+						"url": "{{baseUrl}}/tags"
+					},
+					"response": [
+						{
+							"id": "d5f8062d-79b7-4e18-abfa-f0fd43bac387",
+							"name": "get tags",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{Authorization}}",
+										"type": "text"
+									}
+								],
+								"url": "{{baseUrl}}/tags"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "835"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"343-xiRDLMJeO8ElzSgVFAevHzve6Uc\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 07 Nov 2023 19:55:05 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"status\": \"Success\",\n    \"message\": \"tags retrieved successfully\",\n    \"data\": [\n        {\n            \"id\": 9,\n            \"create_time\": \"2023-11-07T19:45:22.000Z\",\n            \"name\": \"Programming\",\n            \"note_id\": null,\n            \"user_id\": 23\n        },\n        {\n            \"id\": 8,\n            \"create_time\": \"2023-11-07T19:43:56.000Z\",\n            \"name\": \"Programming\",\n            \"note_id\": null,\n            \"user_id\": 23\n        },\n        {\n            \"id\": 7,\n            \"create_time\": \"2023-11-07T19:42:04.000Z\",\n            \"name\": \"Programming\",\n            \"note_id\": null,\n            \"user_id\": 23\n        },\n        {\n            \"id\": 6,\n            \"create_time\": \"2023-11-07T19:41:41.000Z\",\n            \"name\": \"Strong\",\n            \"note_id\": null,\n            \"user_id\": 23\n        },\n        {\n            \"id\": 5,\n            \"create_time\": \"2023-11-07T19:41:02.000Z\",\n            \"name\": \"Fun\",\n            \"note_id\": null,\n            \"user_id\": 23\n        },\n        {\n            \"id\": 4,\n            \"create_time\": \"2023-11-07T19:39:23.000Z\",\n            \"name\": \"politics\",\n            \"note_id\": null,\n            \"user_id\": 23\n        },\n        {\n            \"id\": 3,\n            \"create_time\": \"2023-11-07T19:37:00.000Z\",\n            \"name\": \"sports\",\n            \"note_id\": null,\n            \"user_id\": 23\n        },\n        {\n            \"id\": 2,\n            \"create_time\": \"2023-11-07T19:36:34.000Z\",\n            \"name\": \"test1d\",\n            \"note_id\": null,\n            \"user_id\": 23\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "delete tag",
+					"id": "6f72f349-fc6b-4f5c-865a-4ea17167c952",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"warning": "This is a duplicate header and will be overridden by the Authorization header generated by Postman.",
+								"key": "Authorization",
+								"value": "{{Authorization}}",
+								"type": "text"
+							}
+						],
+						"url": "{{baseUrl}}/tags/11"
+					},
+					"response": [
+						{
+							"id": "8dc15e7f-0616-4bf1-87a1-94788e9ee353",
+							"name": "delete tag",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"warning": "This is a duplicate header and will be overridden by the Authorization header generated by Postman.",
+										"key": "Authorization",
+										"value": "{{Authorization}}",
+										"type": "text"
+									}
+								],
+								"url": "{{baseUrl}}/tags/11"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "157"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"9d-Kf7rN4qGPwBksEgP9g98ipTqEvc\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 07 Nov 2023 19:53:21 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"status\": \"Success\",\n    \"message\": \"tags successfully deleted\",\n    \"data\": {\n        \"fieldCount\": 0,\n        \"affectedRows\": 1,\n        \"insertId\": 0,\n        \"info\": \"\",\n        \"serverStatus\": 2,\n        \"warningStatus\": 0\n    }\n}"
+						}
+					]
+				}
+			],
+			"id": "369bc4ae-1db3-4ca1-bf20-9a06064464e5"
+		},
+		{
+			"name": "Notebook",
+			"item": [
+				{
+					"name": "Create Notebook",
+					"id": "b2e8d7c4-7f71-40a2-8f8e-a795aa5f31fc",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{Authorization}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Mail\",\n    \"icon\": \"🪤\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseUrl}}/notebooks/create"
+					},
+					"response": [
+						{
+							"id": "2b6ee735-6bf4-4ae9-98e5-0e93a98668c5",
+							"name": "Create Notebook",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{Authorization}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Personal\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseUrl}}/notebooks/create"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "111"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"6f-uM1p1dfvs6JIpiiiElWZjFwhzZE\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 07 Nov 2023 20:50:01 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"status\": \"Success\",\n    \"message\": \"notebook created successfully\",\n    \"data\": [\n        {\n            \"id\": 2,\n            \"name\": \"Personal\",\n            \"user_id\": 23\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Edit Notebook",
+					"id": "d08c4977-d77b-483a-8b98-30d2880101a9",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{Authorization}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 4,\n    \"name\": \"Polymer\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseUrl}}/tags/edit"
+					},
+					"response": [
+						{
+							"id": "a673fe7f-dd96-4d24-a728-5a2c52f90eac",
+							"name": "Edit Notebook",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{Authorization}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\": 2,\n    \"name\": \"Office\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseUrl}}/notebooks/edit"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "107"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"6b-u2YHvzQVpt12s1+lg9zgkOXs9ss\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 07 Nov 2023 20:51:30 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"status\": \"Success\",\n    \"message\": \"notebook updated successfully\",\n    \"data\": {\n        \"id\": 2,\n        \"name\": \"Office\",\n        \"user_id\": 23\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "get notebook",
+					"id": "2d05872a-996f-446c-a586-ce46c72e954c",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{Authorization}}",
+								"type": "text"
+							}
+						],
+						"url": "{{baseUrl}}/notebooks"
+					},
+					"response": [
+						{
+							"id": "bf08649e-7a10-419c-a800-6eb55ddbf911",
+							"name": "get notebook",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{Authorization}}",
+										"type": "text"
+									}
+								],
+								"url": "{{baseUrl}}/notebooks"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "131"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"83-VXmeg3mOxd/tm2vo5L2Ahj04pU4\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 07 Nov 2023 20:53:50 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"status\": \"Success\",\n    \"message\": \"notebooks retrieved successfully\",\n    \"data\": [\n        {\n            \"id\": 2,\n            \"name\": \"Office\",\n            \"user_id\": 23,\n            \"create_time\": null\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "delete notebook",
+					"id": "fc84d645-59c0-429a-91fb-1e63fa135035",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"warning": "This is a duplicate header and will be overridden by the Authorization header generated by Postman.",
+								"key": "Authorization",
+								"value": "{{Authorization}}",
+								"type": "text"
+							}
+						],
+						"url": "{{baseUrl}}/tags/11"
+					},
+					"response": [
+						{
+							"id": "64afa643-0f7f-45e0-9046-fc0b2ed88f1f",
+							"name": "delete notebook",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"warning": "This is a duplicate header and will be overridden by the Authorization header generated by Postman.",
+										"key": "Authorization",
+										"value": "{{Authorization}}",
+										"type": "text"
+									}
+								],
+								"url": "{{baseUrl}}/notebooks/4"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "162"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"a2-z7j80CtZjHddEffOAUQVhIER/sg\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 07 Nov 2023 20:54:54 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"status\": \"Success\",\n    \"message\": \"notebooks successfully deleted\",\n    \"data\": {\n        \"fieldCount\": 0,\n        \"affectedRows\": 1,\n        \"insertId\": 0,\n        \"info\": \"\",\n        \"serverStatus\": 2,\n        \"warningStatus\": 0\n    }\n}"
+						}
+					]
+				}
+			],
+			"id": "55eba18e-eb89-4b3a-9913-c5edef368a1f"
+		},
+		{
+			"name": "Trash",
+			"item": [
+				{
+					"name": "Create Trash",
+					"id": "8caf551a-42c4-4706-b0a3-036150faabc8",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{Authorization}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Mail\",\n    \"icon\": \"🪤\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseUrl}}/trash/create"
+					},
+					"response": [
+						{
+							"id": "7b9c6953-e31f-41c5-aee9-4382d11053b5",
+							"name": "Create Notebook",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{Authorization}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Personal\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseUrl}}/notebooks/create"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "111"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"6f-uM1p1dfvs6JIpiiiElWZjFwhzZE\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 07 Nov 2023 20:50:01 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"status\": \"Success\",\n    \"message\": \"notebook created successfully\",\n    \"data\": [\n        {\n            \"id\": 2,\n            \"name\": \"Personal\",\n            \"user_id\": 23\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete A Trash Permanently",
+					"id": "68fcd191-b025-48a6-b5a3-216606cbe3d1",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{Authorization}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 4,\n    \"name\": \"Polymer\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseUrl}}/tags/permenent-delete"
+					},
+					"response": [
+						{
+							"id": "a927da7c-55b6-41d7-be5f-58863f201639",
+							"name": "Edit Notebook",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{Authorization}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\": 2,\n    \"name\": \"Office\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseUrl}}/notebooks/edit"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "107"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"6b-u2YHvzQVpt12s1+lg9zgkOXs9ss\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 07 Nov 2023 20:51:30 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"status\": \"Success\",\n    \"message\": \"notebook updated successfully\",\n    \"data\": {\n        \"id\": 2,\n        \"name\": \"Office\",\n        \"user_id\": 23\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get all Trash",
+					"id": "b0100560-ff3c-40c0-90c9-425151ce0864",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{Authorization}}",
+								"type": "text"
+							}
+						],
+						"url": "{{baseUrl}}/trash"
+					},
+					"response": [
+						{
+							"id": "694adad0-79f2-4dc2-9343-f8ab8fafb4c3",
+							"name": "get notebook",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{Authorization}}",
+										"type": "text"
+									}
+								],
+								"url": "{{baseUrl}}/notebooks"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "131"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"83-VXmeg3mOxd/tm2vo5L2Ahj04pU4\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 07 Nov 2023 20:53:50 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"status\": \"Success\",\n    \"message\": \"notebooks retrieved successfully\",\n    \"data\": [\n        {\n            \"id\": 2,\n            \"name\": \"Office\",\n            \"user_id\": 23,\n            \"create_time\": null\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Undo A note from Trash",
+					"id": "a80e0727-1bf9-4432-8f7d-4591c612be39",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"warning": "This is a duplicate header and will be overridden by the Authorization header generated by Postman.",
+								"key": "Authorization",
+								"value": "{{Authorization}}",
+								"type": "text"
+							}
+						],
+						"url": "{{baseUrl}}/trash/11"
+					},
+					"response": [
+						{
+							"id": "825747c6-7bd7-444d-ae48-4c66746af095",
+							"name": "delete notebook",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"warning": "This is a duplicate header and will be overridden by the Authorization header generated by Postman.",
+										"key": "Authorization",
+										"value": "{{Authorization}}",
+										"type": "text"
+									}
+								],
+								"url": "{{baseUrl}}/notebooks/4"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "162"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"a2-z7j80CtZjHddEffOAUQVhIER/sg\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 07 Nov 2023 20:54:54 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"status\": \"Success\",\n    \"message\": \"notebooks successfully deleted\",\n    \"data\": {\n        \"fieldCount\": 0,\n        \"affectedRows\": 1,\n        \"insertId\": 0,\n        \"info\": \"\",\n        \"serverStatus\": 2,\n        \"warningStatus\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete All Trash Permanently",
+					"id": "b668df78-0667-42b7-954a-3b5fef83a71d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"warning": "This is a duplicate header and will be overridden by the Authorization header generated by Postman.",
+								"key": "Authorization",
+								"value": "{{Authorization}}",
+								"type": "text"
+							}
+						],
+						"url": "{{baseUrl}}/trash/permanent-delete-all"
+					},
+					"response": [
+						{
+							"id": "30248c69-2ec2-4364-acbf-22568087fbcf",
+							"name": "delete notebook",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"warning": "This is a duplicate header and will be overridden by the Authorization header generated by Postman.",
+										"key": "Authorization",
+										"value": "{{Authorization}}",
+										"type": "text"
+									}
+								],
+								"url": "{{baseUrl}}/notebooks/4"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "162"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"a2-z7j80CtZjHddEffOAUQVhIER/sg\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 07 Nov 2023 20:54:54 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"status\": \"Success\",\n    \"message\": \"notebooks successfully deleted\",\n    \"data\": {\n        \"fieldCount\": 0,\n        \"affectedRows\": 1,\n        \"insertId\": 0,\n        \"info\": \"\",\n        \"serverStatus\": 2,\n        \"warningStatus\": 0\n    }\n}"
+						}
+					]
+				}
+			],
+			"id": "4f968316-0393-4965-b2e3-866dfb7394da"
+		},
+		{
+			"name": "Category:",
+			"item": [
+				{
+					"name": "Create Category",
+					"id": "683e2291-96cf-4f7f-aa6d-6c76b4e5f286",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{Authorization}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Programming\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseUrl}}/category/create"
+					},
+					"response": [
+						{
+							"id": "f569c4d7-ada5-4c2b-837a-305777f75d00",
+							"name": "Create Category",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{Authorization}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Programming\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseUrl}}/category/create"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "155"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"9b-cIIWH0d3aRkp3Aa2H8lBIXrGj9k\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 07 Nov 2023 20:25:20 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"status\": \"Success\",\n    \"message\": \"category created successfully\",\n    \"data\": [\n        {\n            \"id\": 2,\n            \"name\": \"Programming\",\n            \"user_id\": 23,\n            \"create_time\": \"2023-11-07T20:25:20.000Z\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Edit Category",
+					"id": "f53a8041-7f9c-477d-9d13-7e66f023d7a8",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{Authorization}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 2,\n    \"name\": \"Polymer\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseUrl}}/category/edit"
+					},
+					"response": [
+						{
+							"id": "2c5fe433-abcd-4b81-aed5-7da0271005a3",
+							"name": "Edit Category",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{Authorization}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\": 2,\n    \"name\": \"Polymer\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseUrl}}/category/edit"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "149"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"95-Qv9jZvJOykPyIgc4mBPSJp8WQFI\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 07 Nov 2023 20:27:00 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"status\": \"Success\",\n    \"message\": \"category updated successfully\",\n    \"data\": {\n        \"id\": 2,\n        \"name\": \"Polymer\",\n        \"user_id\": 23,\n        \"create_time\": \"2023-11-07T20:25:20.000Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "get categories",
+					"id": "fd61df6f-33e4-46ff-acde-97e6fe484f56",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{Authorization}}",
+								"type": "text"
+							}
+						],
+						"url": "{{baseUrl}}/category"
+					},
+					"response": [
+						{
+							"id": "9faa85ab-0722-4401-8dfc-163828b3d6b6",
+							"name": "get categories",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{Authorization}}",
+										"type": "text"
+									}
+								],
+								"url": "{{baseUrl}}/category"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "155"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"9b-B/jVIVXCBoc5X6bXR1DkKd4YgSM\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 07 Nov 2023 20:27:51 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"status\": \"Success\",\n    \"message\": \"categories retrieved successfully\",\n    \"data\": [\n        {\n            \"id\": 2,\n            \"name\": \"Polymer\",\n            \"user_id\": 23,\n            \"create_time\": \"2023-11-07T20:25:20.000Z\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "delete category",
+					"id": "4e919479-a947-4ffe-aa0a-8ee2dc167986",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"warning": "This is a duplicate header and will be overridden by the Authorization header generated by Postman.",
+								"key": "Authorization",
+								"value": "{{Authorization}}",
+								"type": "text"
+							}
+						],
+						"url": "{{baseUrl}}/tags/11"
+					},
+					"response": [
+						{
+							"id": "58858b20-3dfc-4f71-a2ce-701d56d21190",
+							"name": "delete category",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"warning": "This is a duplicate header and will be overridden by the Authorization header generated by Postman.",
+										"key": "Authorization",
+										"value": "{{Authorization}}",
+										"type": "text"
+									}
+								],
+								"url": "{{baseUrl}}/category/2"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "163"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"a3-8wnUi7ZKXWFrGRbv+GJSRUB3Vro\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 07 Nov 2023 20:28:42 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"status\": \"Success\",\n    \"message\": \"categories successfully deleted\",\n    \"data\": {\n        \"fieldCount\": 0,\n        \"affectedRows\": 1,\n        \"insertId\": 0,\n        \"info\": \"\",\n        \"serverStatus\": 2,\n        \"warningStatus\": 0\n    }\n}"
+						}
+					]
+				}
+			],
+			"id": "59e4244a-1a15-4431-bc88-53bc8fad871e"
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "b50f7e35-fff3-423a-8fc3-d66f6a04676a",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "13d0d233-8bbb-4818-a2a1-7c72901d2ca6",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://xnote-api.qridwan.com"
+		},
+		{
+			"key": "Authorization",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJpZHdhbkBnbWFpbC5jb20iLCJ1c2VybmFtZSI6InJpZHdhbiIsImlkIjoyNSwiaWF0IjoxNjk5NjIwOTY1LCJleHAiOjE2OTk2NjQxNjV9.2C3L9luswybonjv8vz2v3F8S8yz9J8JLVVcxuqnYv9Y",
+			"type": "string"
+		}
+	]
+}

@@ -402,7 +402,7 @@
 					},
 					"response": [
 						{
-							"id": "9c1b05a6-07e0-4fd4-b62a-cd5db9d78110",
+							"id": "d82bc411-2309-4cc6-93e6-258d660886c3",
 							"name": "get notes",
 							"originalRequest": {
 								"method": "GET",
@@ -424,20 +424,24 @@
 									"value": "Express"
 								},
 								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
 									"key": "Content-Type",
 									"value": "application/json; charset=utf-8"
 								},
 								{
 									"key": "Content-Length",
-									"value": "754"
+									"value": "23865"
 								},
 								{
 									"key": "ETag",
-									"value": "W/\"2f2-SEubujmrhDEaUZkS4jKkFZVZdfk\""
+									"value": "W/\"5d39-QpgPzkZ66ZRulwvSBQuF5PH4n6I\""
 								},
 								{
 									"key": "Date",
-									"value": "Tue, 07 Nov 2023 18:22:21 GMT"
+									"value": "Tue, 13 Feb 2024 19:38:40 GMT"
 								},
 								{
 									"key": "Connection",
@@ -450,7 +454,7 @@
 							],
 							"cookie": [],
 							"responseTime": null,
-							"body": "{\n    \"status\": \"Success\",\n    \"message\": \"Notes retrieved successfully\",\n    \"data\": [\n        {\n            \"id\": 5,\n            \"create_time\": \"2023-11-07T16:52:52.000Z\",\n            \"update_time\": \"2023-11-07T16:52:52.000Z\",\n            \"title\": \"hello world\",\n            \"content\": \"test content\",\n            \"user_id\": 23,\n            \"notebook_id\": null\n        },\n        {\n            \"id\": 4,\n            \"create_time\": \"2023-11-07T16:50:44.000Z\",\n            \"update_time\": \"2023-11-07T16:50:44.000Z\",\n            \"title\": \"test title 23\",\n            \"content\": \"this is 2ss3\",\n            \"user_id\": 23,\n            \"notebook_id\": null\n        },\n        {\n            \"id\": 3,\n            \"create_time\": \"2023-11-07T16:50:05.000Z\",\n            \"update_time\": \"2023-11-07T16:50:05.000Z\",\n            \"title\": \"test title 23\",\n            \"content\": \"this is 23\",\n            \"user_id\": 23,\n            \"notebook_id\": null\n        },\n        {\n            \"id\": 2,\n            \"create_time\": \"2023-11-07T16:41:50.000Z\",\n            \"update_time\": \"2023-11-07T16:41:50.000Z\",\n            \"title\": \"test title\",\n            \"content\": \"this is content\",\n            \"user_id\": 23,\n            \"notebook_id\": null\n        }\n    ]\n}"
+							"body": "{\n    \"status\": \"Success\",\n    \"message\": \"Notes retrieved successfully\",\n    \"data\": [\n        {\n            \"id\": 56,\n            \"create_time\": \"2024-02-13T01:54:52.000Z\",\n            \"update_time\": \"2024-02-13T01:54:52.000Z\",\n            \"title\": \"sfdasasdfas\",\n            \"content\": \"<p>asdfasdfasd asdfs</p>\",\n            \"user_id\": 25,\n            \"notebook_id\": null,\n            \"category_id\": null,\n            \"color\": \"#e3afaf\",\n            \"category_name\": null,\n            \"notebook_name\": null\n        },\n        {\n            \"id\": 54,\n            \"create_time\": \"2024-02-11T02:53:45.000Z\",\n            \"update_time\": \"2024-02-11T02:53:45.000Z\",\n            \"title\": \"testt\",\n            \"content\": \"<p>test</p>\",\n            \"user_id\": 25,\n            \"notebook_id\": null,\n            \"category_id\": null,\n            \"color\": \"#7caff7\",\n            \"category_name\": null,\n            \"notebook_name\": null\n        },\n        {\n            \"id\": 53,\n            \"create_time\": \"2024-02-11T02:52:23.000Z\",\n            \"update_time\": \"2024-02-11T02:52:23.000Z\",\n            \"title\": \"test\",\n            \"content\": \"<p>test</p>\",\n            \"user_id\": 25,\n            \"notebook_id\": null,\n            \"category_id\": null,\n            \"color\": \"#21ff0d\",\n            \"category_name\": null,\n            \"notebook_name\": null\n        },\n        {\n            \"id\": 43,\n            \"create_time\": \"2024-01-09T05:06:00.000Z\",\n            \"update_time\": \"2024-02-06T03:31:44.000Z\",\n            \"title\": \"Recommendation Letter, Tariqul Sir\",\n            \"content\": \"<p style=\\\"text-align: center\\\">TO WHOM IT MAY CONCERN,</p><p>I am writing to wholeheartedly recommend Mohammad Ridwanul Alam for admission to the Master's Program at your esteemed University. Having had the privilege of being his professor for more than four years, I am confident in his capabilities and potential for success in your program.</p><p>Mohammad Ridwanul Alam completed his undergraduate studies in the Department of Wet Processing Engineering at Textile Engineering College, Zorargonj, affiliated with Bangladesh University of Textiles. I had the pleasure of teaching him courses such as AE185 (Computer Fundamental), AE128 (Electrical &amp; Electronics Engineering), and WPE347 (Application of Computer in Wet Processing).</p><p>Throughout my interactions with Ridwanul, he consistently displayed attentiveness and intellectual curiosity. His performance in both practical and theoretical aspects of the courses was noteworthy. His interest in practical learning techniques was noticeable, and he actively participated in class discussions and research-related activities.</p><p>For his project, Ridwanul undertook a comprehensive study on the attributes of fibers during various processes. His dedication to the project, coupled with his ability to seek guidance when needed, resulted in the submission of a flawless paper.</p><p>I have full confidence in Ridwanul's ability to excel in his graduate studies. His commendable performance over the years and his active involvement in various capacities make him an outstanding candidate. I am certain that he will make a valuable addition to your university and contribute positively to its community.</p><p>He is trying to diversify his knowledge from Textile to IT, expressing a keen interest in diving into software engineering. I wish him the very best of luck, and I am confident that he will shine in this field.</p><p>Should you have any further inquiries or require additional information, please feel free to contact me.</p><p><br></p><p>Regards,</p><p><br><br></p><p>________________</p><p>Md Tariqul Islam</p><p>Associate Professor (Dept. of Information Technology)</p><p>Textile Engineering College, Zorargonj, Chattogram</p><p>E-mail: <a target=\\\"_blank\\\" rel=\\\"noopener noreferrer nofollow\\\" href=\\\"mailto:tariqulislam.butex@gmail.com\\\"><u>tariqulislam.butex@gmail.com</u></a>&nbsp;</p>\",\n            \"user_id\": 25,\n            \"notebook_id\": 8,\n            \"category_id\": null,\n            \"color\": \"#296b53\",\n            \"category_name\": null,\n            \"notebook_name\": \"Temp\"\n        },\n        {\n            \"id\": 44,\n            \"create_time\": \"2024-01-09T06:14:55.000Z\",\n            \"update_time\": \"2024-02-06T03:27:51.000Z\",\n            \"title\": \"Study Plan for Master's Studies \",\n            \"content\": \"<h3>Name: Mohammad Ridwanul Alam</h3><h2 style=\\\"text-align: center\\\"><strong>Study Plan for Master's Studies&nbsp;</strong></h2><p>I'm Mohammad Ridwanul Alam, a Textile Engineering graduate from Bangladesh University of Textiles. Excited to combine my diverse background in Textile Engineering with my experience as a Software Developer, I'm eager to dive into the dynamic world of Computer Science and Software Engineering. Despite not having an IT major, my passion for software development has driven me to self-learn valuable skills using open-source, on-campus, and remote resources.</p><p>My graduation in 2019 laid the academic foundation in Textile Engineering, while my professional experience equipped me with essential problem-solving skills and a structured approach to driving innovation. Applying my knowledge across various real-world scenarios, I continually expand my expertise and adapt to new challenges. Now aiming to push boundaries and create a positive impact in the evolving technological landscape.</p><h3><strong>Academic and Professional Journey</strong></h3><p>My venture into Information Technology commenced in 2020 with a remote Full-stack Software Developer role in India. During this period, I cultivated proficiency in Python, JavaScript, C, and C++, while also gaining hands-on expertise in database management and data communication.</p><p>As a Full-stack software developer, I have successfully navigated diverse projects, addressing unique challenges and applying my programming expertise creatively. Beyond the confines of the workplace, my pursuit of knowledge extends to attending webinars, participating in coding competitions, and exploring new frameworks to stay abreast of industry trends.</p><p>Driven by a passion for IT, I dedicate my leisure time to engaging in coding tutorials and personal projects, fostering creativity and refining my problem-solving skills. Collaboration has been a cornerstone of my journey, with diverse teamwork experiences teaching me the significance of effective communication in achieving success.</p><p>Currently, I am enrolled on campus in a Postgraduate Diploma in ICT (PGDICT) program (offering 36 credits) at Bangladesh University of Engineering and Technology (BUET) in 2023. In the first semester, I successfully completed 9 credits with courses in Programming Concepts, Database Design and Management, and Visual Programming. The Programming Concepts course covered an array of topics, including Introduction to programming and logic flow, procedural versus object-oriented programming, data types, variables, constants, operators, expressions, input-output, control structures, arrays, functions, pointers, file access, structures, dynamic memory allocation, classes, objects, constructor and destructor, inheritance, polymorphism, files, and exception handling.</p><p>The Database Design and Management course delved into Introduction to database, Relational model (structure, relational algebra, SQL, and advanced SQL), Database design and the entity-relationship model, Relational database design and normalisation, application design and development, indexing, Database storage and file structure, transaction management, concurrency control recovery management, object database, and database administration.</p><p>In the Visual Programming course, I acquired knowledge in Data types, variables, and expressions, control structures; Classes and objects, constructors; Inheritance, packages, and interfaces; Exception handling; Collection classes: array, vector; Threads; GUI development; applets; Graphics and multimedia; Servlet; JDBC; Java beans; Java server page; Java networking.</p><p>Looking ahead, I am eager to continue growing in the dynamic IT realm, embracing challenges, expanding my skills, and making impactful contributions. IT has been transformative, fostering both professional and personal growth. With unwavering dedication, I am poised to thrive in this ever-evolving field.<br><br></p><h3><strong>Transition and Motivation for Master's Studies</strong></h3><p>Embarking on the path of Information Technology has ignited my curiosity and a profound eagerness to delve deeper into the intricacies of this dynamic field. Armed with existing technical skills, I am now driven to pursue a Master's degree in Software Engineering, marking a significant leap in my academic and professional journey. This decision is propelled by my aspiration to seamlessly blend my technical prowess with a comprehensive understanding of communication systems and cutting-edge software technologies. This academic pursuit signifies not only a personal milestone but also a strategic move to broaden my knowledge horizon and make substantial contributions to the evolving landscape of IT.</p><h3><strong>Study Objectives and Research Interests</strong></h3><p>As I look forward to embarking on the Master's program, my excitement revolves around three main areas – Software Engineering, Data Analysis, and Communication. These fields not only spark my intellectual curiosity but also represent exciting avenues for exploration.</p><p>Adding a unique twist to my academic journey, I'm thrilled about the prospect of merging textile engineering with information technology. The idea of finding innovative connections between these seemingly different realms is like solving a captivating puzzle, and I'm eager to unravel creative solutions that harmonise these diverse domains.</p><p>Beyond the serious academic pursuits, my goal is to infuse a sense of fun and curiosity into this learning adventure. I see this journey as an opportunity to not just study these subjects but to play with ideas, make unexpected connections, and maybe even stumble upon some unconventional yet brilliant solutions.</p><p>In essence, I'm not just here to master these disciplines individually but to dance between them, exploring the synergies and discovering how they can amplify each other. Picture it as a unique blend of academic exploration and creative experimentation – a bit like mixing colors on a canvas to create something entirely new and exciting.</p><p>So, as I set sail into the Master's program, my aim is not just to gain knowledge but to craft a dynamic, interdisciplinary skill set. I want to be that technologist who not only understands the intricacies of Software Engineering, Data Analysis, and Communication but also sees the playful potential in merging the worlds of technology and textiles.</p><p>Here's to an adventure filled with learning, laughter, and, of course, a sprinkle of unexpected discoveries!</p><h3><strong>Reason for Choosing China and Expectations from the Program</strong></h3><p>China's leading role in technology and its dedication to academic excellence have really caught my attention. I'm excited about the idea of pursuing higher education in such a dynamic and forward-thinking place. The rich culture, top-notch research facilities, and amazing faculty in China make it an ideal destination for my studies.</p><p>I come from a diverse background, especially transitioning into Software Engineering. I believe this diversity will bring a fresh perspective to the learning environment. I'm not just looking to absorb knowledge; I'm eager to actively contribute to the field based on my varied experiences. What makes China even more appealing is its immersive learning environment. The hands-on experience and exposure to advanced technologies are exactly what I'm looking for in my academic journey. I see this as not just getting a degree but embarking on a meaningful adventure of growth and contribution.</p><p>In a nutshell, I'm thrilled about the idea of studying in China. It's not just about expanding my personal horizons; it's about being part of the vibrant academic landscape and making a real impact in the world of Software Engineering.</p><h3><strong>Conclusion</strong></h3><p>I am truly excited about the prospect of contributing to China's dynamic academic community, acquiring advanced knowledge, and participating in collaborative research initiatives. Your esteemed institution stands out as the perfect platform for my growth in IT, and I'm genuinely enthusiastic about embarking on this transformative journey. The opportunity to be a part of such a renowned academic environment is something I eagerly look forward to.</p><p><br></p><p>Sincerely <br>Mohammad Ridwanul Alam<br>Chittagong, Bangladesh</p><p><a target=\\\"_blank\\\" rel=\\\"noopener noreferrer nofollow\\\" href=\\\"mailto:404ridwan@gmail.com\\\"><u>404ridwan@gmail.com</u></a> | +8801521-328978&nbsp;</p>\",\n            \"user_id\": 25,\n            \"notebook_id\": 15,\n            \"category_id\": null,\n            \"color\": \"#105c02\",\n            \"category_name\": null,\n            \"notebook_name\": \"Finance\"\n        },\n        {\n            \"id\": 41,\n            \"create_time\": \"2023-12-10T19:38:16.000Z\",\n            \"update_time\": \"2023-12-10T19:40:20.000Z\",\n            \"title\": \"ভ্যাবিলন সভ্যতা ও মুসলিম জাতির পিতার ৪ হাজার ১৪ বছর আগের অবিস্মরণীয় ইতিহাস আবু ত্বহা মুহাম্মদ আদনান\",\n            \"content\": \"<p>ব্যাবিলন - বর্তমান ইরাক বাগদাদ হলো বেবিলন</p><p>কুরআন প্রত্যেক বিষয়ে ব্যাখ্যা রয়েছে </p><p><mark>সুরাতুল বাকার ১০১/১০২</mark></p><p>৪২০০ বছর আগে সুন্দরফুটফুটে বাচ্চা জম্ম গ্রহণ করে</p><p>নমরুদের পুরোহিতের ঘরে জন্ম নেয় তৌহিদের শেখর হজরত ইব্রাহিম আলাইহিস্সালাম</p><p>এ সভ্যতাকে বলা হয় কালাদিউ সভ্যতা বলা হয় ।</p><p>নমরুদ ৪০০ বছর বেচে ছিল</p><p>যারা সমাজ কে পরির্বতনকরে তারা কখনো সমাজের জাহিলিয়তে গা ভাসায় না </p><p><mark>সূরা মারিয়াম ৪১-৪৫</mark></p><p><strong>وَٱذۡكُرۡ فِى ٱلۡكِتَٰبِ إِبۡرَٰهِيمَۚ إِنَّهُۥ كَانَ صِدِّيقًا نَّبِيًّا</strong></p><p>আপনি এই কিতাবে ইব্রাহীমের কথা বর্ণনা করুন। নিশ্চয় তিনি ছিলেন সত্যবাদী, নবী।</p><p><strong>إِذۡ قَالَ لِأَبِيهِ يَٰٓأَبَتِ لِمَ تَعۡبُدُ مَا لَا يَسۡمَعُ وَلَا يُبۡصِرُ وَلَا يُغۡنِى عَنكَ شَيۡـًٔا</strong></p><p>যখন তিনি তার পিতাকে বললেনঃ হে আমার পিতা, যে শোনে না, দেখে না এবং তোমার কোন উপকারে আসে না, তার এবাদত কেন কর?</p><p><strong>يَٰٓأَبَتِ إِنِّى قَدۡ جَآءَنِى مِنَ ٱلۡعِلۡمِ مَا لَمۡ يَأۡتِكَ فَٱتَّبِعۡنِىٓ أَهۡدِكَ صِرَٰطًا سَوِيًّا</strong></p><p>হে আমার পিতা, আমার কাছে এমন জ্ঞান এসেছে; যা তোমার কাছে আসেনি, সুতরাং আমার অনুসরণ কর, আমি তোমাকে সরল পথ দেখাব।</p><p><strong>يَٰٓأَبَتِ لَا تَعۡبُدِ ٱلشَّيۡطَٰنَۖ إِنَّ ٱلشَّيۡطَٰنَ كَانَ لِلرَّحۡمَٰنِ عَصِيًّا</strong></p><p>হে আমার পিতা, শয়তানের এবাদত করো না। নিশ্চয় শয়তান দয়াময়ের অবাধ্য।</p><p><strong>يَٰٓأَبَتِ إِنِّىٓ أَخَافُ أَن يَمَسَّكَ عَذَابٌ مِّنَ ٱلرَّحۡمَٰنِ فَتَكُونَ لِلشَّيۡطَٰنِ وَلِيًّا</strong></p><p>হে আমার পিতা, আমি আশঙ্কা করি, দয়াময়ের একটি আযাব তোমাকে স্পর্শ করবে, অতঃপর তুমি শয়তানের সঙ্গী হয়ে যাবে।</p><p>-——————————————-————————</p><p>একটা নসিহত কখনোও নিজেকে জাহির করবেনা, করলে আল্লাহ পাক জ্ঞানকে তুলে নিবেন </p><p>-——————————————-————————</p><p>॰যোগ্যতা কে মুল্যায়ন করতে হবে </p><p>বাবার উত্তর: </p><p><mark>Maryam 19:46</mark></p><p><strong>قَالَ أَرَاغِبٌ أَنتَ عَنۡ ءَالِهَتِى يَٰٓإِبۡرَٰهِيمُۖ لَئِن لَّمۡ تَنتَهِ لَأَرۡجُمَنَّكَۖ وَٱهۡجُرۡنِى مَلِيًّا</strong></p><p>পিতা বললঃ হে ইব্রাহীম, তুমি কি আমার উপাস্যদের থেকে মুখ ফিরিয়ে নিচ্ছ? যদি তুমি বিরত না হও, আমি অবশ্যই প্রস্তরাঘাতে তোমার প্রাণনাশ করব। তুমি চিরতরে আমার কাছ থেকে দূর হয়ে যাও।</p><p>ইব্রাহিম আলাইহিসালাম উত্তর: </p><p><mark>Maryam 19:47</mark></p><p><strong>قَالَ سَلَٰمٌ عَلَيۡكَۖ سَأَسۡتَغۡفِرُ لَكَ رَبِّىٓۖ إِنَّهُۥ كَانَ بِى حَفِيًّا</strong></p><p>ইব্রাহীম বললেনঃ তোমার উপর শান্তি হোক, আমি আমার পালনকর্তার কাছে তোমার জন্যে ক্ষমা প্রার্থনা করব। নিশ্চয় তিনি আমার প্রতি মেহেরবান।</p><p>॰ দ্বীনের পথে কলতে গেলে  সর্বপ্রথম বাধা পরিবার থেকে আসতে পারে</p><p>॰ ইব্রাহিমআলাইহিস সালাম এবং মুহাম্মদ সাল্লাল্লাহু আলাইহী ওয়াসল্লাম এর স্পেশাল নিয়ামত হল স্ত্রী</p><p>॰ হক পন্থীদের আল্লাহর নিয়ামত হল একাকীত্ব</p><p> সূরা আম্বিয়া/ সফফা/ আন’আম</p><p>॰ আল্লাহ, রসূল, সাহাবী সবাইকে মানতে হবে  </p><p>॰ বাপদাদাদের দেখেছি এভাবে পূজা করতে তাই করতেছি </p><p>॰ নুহ আলাইহিস সালাম থেকে মূর্তি পূজা শুরু হয়েছিল</p><p>❓আসলেই কী তারা শুনতে পায় , আসলেই কি তারা উপকার করতে পারে , আসলেই কী তারা সৃষ্টিকর্তার প্রতিমূর্তি হতে পারে ? </p><p>॰যে যতোবড় জালেম তার বুদ্ধি ততো মোটা </p><p>॰জুলুম মানুষের বুদ্ধি লোপ করে দেয়</p><p>॰শিরক মানুষের মনে ভয় সঞ্চার করে </p><p>॰মুশরেক কখনো ইসলামে বীজয় লাভ করতে পারে নায়<br></p><p><a target=\\\"_blank\\\" rel=\\\"noopener noreferrer nofollow\\\" href=\\\"https://youtu.be/GRAFzki2cUs?si=Xbx3AiHzTnksloC9\\\">https://youtu.be/GRAFzki2cUs?si=Xbx3AiHzTnksloC9 </a></p><p></p>\",\n            \"user_id\": 25,\n            \"notebook_id\": 20,\n            \"category_id\": null,\n            \"color\": \"#0019a3\",\n            \"category_name\": null,\n            \"notebook_name\": \"Islamic\"\n        },\n        {\n            \"id\": 39,\n            \"create_time\": \"2023-12-03T20:43:20.000Z\",\n            \"update_time\": \"2023-12-03T21:07:58.000Z\",\n            \"title\": \"Milaunnabi mahfil 2023, Nabi Eidgah\",\n            \"content\": \"<p><mark>Muhammad Abdul aziz razbi:</mark><br>- মুত্তাকী হও যেভাবে আল্লাহ হতে বলেছেন <br>- তাকওয়া, আল্লাহর ভয়<br>- যার তাকওয়া আছে -&gt; মুত্তাকী / সলেহীন/ মুসলিমিন/ মুহসীনীন / সদেকিন/ <br>- সামাজিক / রাজনৈতিক / পারিবারিক অশান্তির মুল কারন তাকওয়ার অভাব <br>- তাকওয়া অর্জন করেন৷ আল্লাহর ডর ভয় অর্জন করেন।<br>- নিজের ছেলেকে অলি বানানোর আগে নিজেকে তাকওয়া অবলম্বন করতে হবে<br>- আলিয়া মাদ্রাসায় ইলম উঠে যাচ্ছে<br>- ইল্ম অন্বেষণ এর ইচ্ছা চলে যাচ্ছে <br>- আগামী ১০ বছর পর ঈমাম পাওয়া দুষ্কর হয়ে যাবে<br>- শিক্ষার নামে চলছে আলুভর্তা বানানোর প্রেক্টীস<br>- প্রাতিষ্ঠানিক শিক্ষার চেয়ে বেশী দরকার পারিবারিক শিক্ষা <br>- হাশরের ময়দানে এমন কিছু বান্দা আসবে ইবাদতের মাত্রা হবে মহাপর্বতসম যা ধূলিস্যাৎ হয়ে যাবে মুহুর্তের মধ্যে, হাওয়াই মিঠার মতো। কারন, এরা চুপেচাপে আল্লাহ অসন্তোষ হয় এমন কাজ করতো <br>- মোবাইল চরিত্র ধংসের মুল কারন হয়ে উঠছে<br>- চরিত্র শোধরাতে হবে, নবীর চরিত্র অনুসরণ করতে হবে।<br><br>- নবী স, আবু জর গীফার রা. ১০ নসিহত করেছেন<br>১- নিংস/এতিম/ গরীব কে ভালোবাস [- ২টি জিনিস নবী করিম স. ভালোবাসেন ১) জিহাদ ফী সাবিলিল্লাহ, ২)গরীব/এতিম কে ভালো বাসা]<br><br><br>২- নিচের দিকে তাকাবে, শুকরিয়া করতে হবে<br><br>৩- আত্বীয়স্বজনের হক যাথাযথভাবে বজায় রাখা<br>&gt; যে ব্যাক্তি রেহেমের সাথে সম্পর্ক রাখেনা, সে ব্যাক্তির সাথে রহমানের কোন সম্পর্ক নেই<br><br>৪- কারো কাছে কোন জিনিসের জন্য হাত পাতবেনা <br>৫- সদা সর্বদা ন্যায়, হক কথা বলবে<br>&gt; যে ব্যাক্তি সামর্থ্য থাকা সত্ত্বেও হক কথা বলবেনা সে হল বোবা শয়তান <br>৬- কখনো নিন্দুকের নিন্দা কে ভয় করবেনা <br>&gt; গীবত/ হিংসা <br>৭- \\\"লা হাওলা ওয়া কুওয়াতা ইল্লা বিল্লাহ\\\" জিকির করবে<br>&gt; সমস্যার সমাধান হয়<br><br></p>\",\n            \"user_id\": 25,\n            \"notebook_id\": 20,\n            \"category_id\": null,\n            \"color\": \"#0d8700\",\n            \"category_name\": null,\n            \"notebook_name\": \"Islamic\"\n        }\n    ]\n}"
 						}
 					]
 				},
@@ -1468,77 +1472,16 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"id\": 4,\n    \"name\": \"Polymer\"\n}",
+							"raw": "{\n    \"note_id\": 67,\n    \"user_id\": 25\n}",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
 						},
-						"url": "{{baseUrl}}/tags/permenent-delete"
+						"url": "{{baseUrl}}/trash/permenent-delete"
 					},
-					"response": [
-						{
-							"id": "a927da7c-55b6-41d7-be5f-58863f201639",
-							"name": "Edit Notebook",
-							"originalRequest": {
-								"method": "PATCH",
-								"header": [
-									{
-										"key": "Authorization",
-										"value": "{{Authorization}}",
-										"type": "text"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n    \"id\": 2,\n    \"name\": \"Office\"\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": "{{baseUrl}}/notebooks/edit"
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "X-Powered-By",
-									"value": "Express"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json; charset=utf-8"
-								},
-								{
-									"key": "Content-Length",
-									"value": "107"
-								},
-								{
-									"key": "ETag",
-									"value": "W/\"6b-u2YHvzQVpt12s1+lg9zgkOXs9ss\""
-								},
-								{
-									"key": "Date",
-									"value": "Tue, 07 Nov 2023 20:51:30 GMT"
-								},
-								{
-									"key": "Connection",
-									"value": "keep-alive"
-								},
-								{
-									"key": "Keep-Alive",
-									"value": "timeout=5"
-								}
-							],
-							"cookie": [],
-							"responseTime": null,
-							"body": "{\n    \"status\": \"Success\",\n    \"message\": \"notebook updated successfully\",\n    \"data\": {\n        \"id\": 2,\n        \"name\": \"Office\",\n        \"user_id\": 23\n    }\n}"
-						}
-					]
+					"response": []
 				},
 				{
 					"name": "Get all Trash",
@@ -1562,8 +1505,8 @@
 					},
 					"response": [
 						{
-							"id": "694adad0-79f2-4dc2-9343-f8ab8fafb4c3",
-							"name": "get notebook",
+							"id": "6d733c8a-23dd-4853-a059-6cc2a114246b",
+							"name": "Get all Trash",
 							"originalRequest": {
 								"method": "GET",
 								"header": [
@@ -1573,7 +1516,7 @@
 										"type": "text"
 									}
 								],
-								"url": "{{baseUrl}}/notebooks"
+								"url": "{{baseUrl}}/trash"
 							},
 							"status": "OK",
 							"code": 200,
@@ -1584,20 +1527,24 @@
 									"value": "Express"
 								},
 								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
 									"key": "Content-Type",
 									"value": "application/json; charset=utf-8"
 								},
 								{
 									"key": "Content-Length",
-									"value": "131"
+									"value": "1267"
 								},
 								{
 									"key": "ETag",
-									"value": "W/\"83-VXmeg3mOxd/tm2vo5L2Ahj04pU4\""
+									"value": "W/\"4f3-111BH2XrFXDBazJL2hjKw404IKg\""
 								},
 								{
 									"key": "Date",
-									"value": "Tue, 07 Nov 2023 20:53:50 GMT"
+									"value": "Tue, 13 Feb 2024 19:38:26 GMT"
 								},
 								{
 									"key": "Connection",
@@ -1610,7 +1557,7 @@
 							],
 							"cookie": [],
 							"responseTime": null,
-							"body": "{\n    \"status\": \"Success\",\n    \"message\": \"notebooks retrieved successfully\",\n    \"data\": [\n        {\n            \"id\": 2,\n            \"name\": \"Office\",\n            \"user_id\": 23,\n            \"create_time\": null\n        }\n    ]\n}"
+							"body": "{\n    \"status\": \"Success\",\n    \"message\": \"trash retrieved successfully\",\n    \"data\": [\n        {\n            \"id\": 61,\n            \"create_time\": \"2023-12-03T20:07:35.000Z\",\n            \"update_time\": \"2023-12-06T20:48:35.000Z\",\n            \"title\": \"BUET My EMAIL\",\n            \"content\": \"<h4><code>0423311012@iict.buet.ac.bd</code></h4>\",\n            \"user_id\": 25,\n            \"notebook_id\": 12,\n            \"category_id\": null,\n            \"color\": \"#db2a2a\",\n            \"note_id\": 38,\n            \"deleted_at\": \"2024-02-06T23:17:56.000Z\",\n            \"trash_id\": 61\n        },\n        {\n            \"id\": 65,\n            \"create_time\": \"2024-02-13T02:07:37.000Z\",\n            \"update_time\": \"2024-02-13T02:07:37.000Z\",\n            \"title\": \"Thinking\",\n            \"content\": \"<p>sfsd</p>\",\n            \"user_id\": 25,\n            \"notebook_id\": 20,\n            \"category_id\": null,\n            \"color\": \"#db2a2a\",\n            \"note_id\": 57,\n            \"deleted_at\": \"2024-02-13T02:12:17.000Z\",\n            \"trash_id\": 65\n        },\n        {\n            \"id\": 66,\n            \"create_time\": \"2024-02-11T02:55:02.000Z\",\n            \"update_time\": \"2024-02-11T02:55:02.000Z\",\n            \"title\": \"testdd\",\n            \"content\": \"<p>asdf</p>\",\n            \"user_id\": 25,\n            \"notebook_id\": 20,\n            \"category_id\": null,\n            \"color\": \"#fce1e1\",\n            \"note_id\": 55,\n            \"deleted_at\": \"2024-02-13T02:12:24.000Z\",\n            \"trash_id\": 66\n        },\n        {\n            \"id\": 67,\n            \"create_time\": \"2024-02-13T03:14:30.000Z\",\n            \"update_time\": \"2024-02-13T03:14:30.000Z\",\n            \"title\": \"Think and grow rich\",\n            \"content\": \"<p style=\\\"text-align: right\\\">Hello there,<br>What you are working today??</p>\",\n            \"user_id\": 25,\n            \"notebook_id\": null,\n            \"category_id\": null,\n            \"color\": \"#f7c6c6\",\n            \"note_id\": 59,\n            \"deleted_at\": \"2024-02-13T03:16:03.000Z\",\n            \"trash_id\": 67\n        }\n    ]\n}"
 						}
 					]
 				},
@@ -2105,7 +2052,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "b50f7e35-fff3-423a-8fc3-d66f6a04676a",
+				"id": "e7daf6da-4e1a-41ab-96be-cc8e2ad9ff3e",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -2115,7 +2062,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "13d0d233-8bbb-4818-a2a1-7c72901d2ca6",
+				"id": "1a46616c-3ef4-4ea4-b813-ee2a6790c080",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -2126,11 +2073,17 @@
 	"variable": [
 		{
 			"key": "baseUrl",
-			"value": "https://xnote-api.qridwan.com"
+			"value": "https://xnote-api.qridwan.com/api",
+			"disabled": true
 		},
 		{
 			"key": "Authorization",
-			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJpZHdhbkBnbWFpbC5jb20iLCJ1c2VybmFtZSI6InJpZHdhbiIsImlkIjoyNSwiaWF0IjoxNjk5NjIwOTY1LCJleHAiOjE2OTk2NjQxNjV9.2C3L9luswybonjv8vz2v3F8S8yz9J8JLVVcxuqnYv9Y",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJpZHdhbkBnbWFpbC5jb20iLCJ1c2VybmFtZSI6InJpZHdhbiIsImlkIjoyNSwiaWF0IjoxNzA3ODUzMDI1LCJleHAiOjE3MDc4OTYyMjV9.HN6P6l5bpqSBeOH-Th8am9eE41ptVZnSn6msZbldNuI",
+			"type": "string"
+		},
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:8080/api",
 			"type": "string"
 		}
 	]

@@ -50,6 +50,7 @@ const gettrash = async (req: express.Request, res: express.Response) => {
     status.errorResponse(res, "Error creating trash. " + error.message);
   }
 };
+
 /**
  * @description
  * @param req
@@ -64,7 +65,25 @@ const deletetrash = async (req: express.Request, res: express.Response) => {
   } catch (error) {
     status.errorResponse(
       res,
-      "Error creating trash:" + error.message + ". Please contact an admin."
+      "Error deleting trash:" + error.message + ". Please contact an admin."
+    );
+  }
+};
+/**
+ * @description Deletes all trash items
+ * @param req
+ * @param res
+ * @returns
+ */
+const deleteAllTrash = async (req: express.Request, res: express.Response) => {
+  try {
+    const { id } = getUserInfo(req.headers.authorization);
+    const result = await trash.permanentDeleteAll(Number(id));
+    status.successResponse(res, result, "All trash items deleted successfully");
+  } catch (error) {
+    status.errorResponse(
+      res,
+      "Error deleting all trash items: " + error.message
     );
   }
 };
@@ -74,4 +93,5 @@ export const trashController = {
   gettrash,
   deletetrash,
   permenentDelete,
+  deleteAllTrash,
 };

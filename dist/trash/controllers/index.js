@@ -77,7 +77,23 @@ const deletetrash = (req, res) => __awaiter(void 0, void 0, void 0, function* ()
         status_1.default.successResponse(res, result, "trash successfully deleted");
     }
     catch (error) {
-        status_1.default.errorResponse(res, "Error creating trash:" + error.message + ". Please contact an admin.");
+        status_1.default.errorResponse(res, "Error deleting trash:" + error.message + ". Please contact an admin.");
+    }
+});
+/**
+ * @description Deletes all trash items
+ * @param req
+ * @param res
+ * @returns
+ */
+const deleteAllTrash = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    try {
+        const { id } = (0, getInfoFromJwt_1.getUserInfo)(req.headers.authorization);
+        const result = yield domain_1.trash.permanentDeleteAll(Number(id));
+        status_1.default.successResponse(res, result, "All trash items deleted successfully");
+    }
+    catch (error) {
+        status_1.default.errorResponse(res, "Error deleting all trash items: " + error.message);
     }
 });
 exports.trashController = {
@@ -85,5 +101,6 @@ exports.trashController = {
     gettrash,
     deletetrash,
     permenentDelete,
+    deleteAllTrash,
 };
 //# sourceMappingURL=index.js.map

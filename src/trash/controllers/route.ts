@@ -16,6 +16,8 @@ trash.patch(
   Middlewares.validateSchemas<trashType>(trashEditSchema),
   trashController.permenentDelete
 );
+trash.delete("/permanent-delete-all", trashController.deleteAllTrash);
+
 trash.get("/", trashController.gettrash);
 trash.delete("/:id", trashController.deletetrash);
 export default trash;

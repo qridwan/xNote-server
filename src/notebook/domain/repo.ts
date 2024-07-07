@@ -22,7 +22,12 @@ const deletenotebook = async (notebook_id: string) => {
     "delete from notebooks where id = ?",
     notebook_id
   );
-  return res[0];
+  //delete all notes related to this notebook
+  await client.raw("delete from notes where notebook_id = ?", notebook_id);
+  //delete all trash related to this notebook
+  await client.raw("delete from trash where notebook_id = ?", notebook_id);
+
+  return { message: "notebook deleted", res: res[0] };
 };
 
 /**

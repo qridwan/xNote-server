@@ -30,7 +30,11 @@ const mynotebooks = (user_id) => __awaiter(void 0, void 0, void 0, function* () 
  */
 const deletenotebook = (notebook_id) => __awaiter(void 0, void 0, void 0, function* () {
     const res = yield knex_1.default.raw("delete from notebooks where id = ?", notebook_id);
-    return res[0];
+    //delete all notes related to this notebook
+    yield knex_1.default.raw("delete from notes where notebook_id = ?", notebook_id);
+    //delete all trash related to this notebook
+    yield knex_1.default.raw("delete from trash where notebook_id = ?", notebook_id);
+    return { message: "notebook deleted", res: res[0] };
 });
 /**
  * @description This function adds an user to the database

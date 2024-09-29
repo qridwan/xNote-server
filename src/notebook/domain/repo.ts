@@ -70,11 +70,10 @@ const edit = async (notebook: notebookType) => {
   }
 
   // Update the notebook with the new data.
-  await client.raw("update notebooks set name = ?, user_id = ?  where id = ?", [
-    notebook.name,
-    notebook.user_id,
-    notebookId,
-  ]);
+  await client.raw(
+    "update notebooks set name = ?, user_id = ?, icon = ?  where id = ?",
+    [notebook.name, notebook.user_id, notebook.icon, notebookId]
+  );
 
   // Fetch and return the updated notebook.
   const updatednotebook = await client.raw(

@@ -61,11 +61,7 @@ const edit = (notebook) => __awaiter(void 0, void 0, void 0, function* () {
         throw new Error("notebook not found");
     }
     // Update the notebook with the new data.
-    yield knex_1.default.raw("update notebooks set name = ?, user_id = ?  where id = ?", [
-        notebook.name,
-        notebook.user_id,
-        notebookId,
-    ]);
+    yield knex_1.default.raw("update notebooks set name = ?, user_id = ?, icon = ?  where id = ?", [notebook.name, notebook.user_id, notebook.icon, notebookId]);
     // Fetch and return the updated notebook.
     const updatednotebook = yield knex_1.default.raw("select * from notebooks where id = ?", [notebookId]);
     return updatednotebook[0][0];

@@ -3,9 +3,13 @@
 ## [API Documentation](https://documenter.getpostman.com/view/15074292/2s9YXfcimY#22177e0b-79c1-499f-ad21-a4e7deb0b6cf)
 ## [LIVE](https://xnote.qridwan.com)
 
+----
+
 1. **Smart Note Taking Application**
 
 Digital platform that allows users to create, manage, and organize text-based notes. It provides users with the ability to create, edit, categorize, and search for notes, making it easy to capture and retrieve information efficiently.
+
+----
 
 **2. Features:**
 
@@ -25,7 +29,34 @@ Digital platform that allows users to create, manage, and organize text-based no
   - Users can share notes with others.
   - Collaborative note editing and commenting.
 
-3. Data Requirements:
+----
+
+**3. Installation**
+
+To install the xNote application backend service, follow these steps:
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/qridwan/xNote-server.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd xNote-server
+   ```
+3. Install the dependencies:
+   ```bash
+   yarn
+   ```
+
+4. Set up the environment variables by creating a `.env` file and adding the necessary configurations from `.env.example`
+
+5. Start the server:
+   ```bash
+	yarn dev
+   ```
+------
+
+**4. Data Requirements:**
 
 **Users:**
 

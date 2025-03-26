@@ -1,39 +1,51 @@
-# xNote application Backend Service
+# xNote Application Backend Service
 
-## [API Documentation](https://documenter.getpostman.com/view/15074292/2s9YXfcimY#22177e0b-79c1-499f-ad21-a4e7deb0b6cf)
-## [LIVE](https://xnote.qridwan.com)
+## Table of Contents
 
-----
+1. [Introduction](#introduction)
+2. [Features](#features)
+3. [Installation](#installation)
+4. [Data Requirements](#data-requirements)
+   - [Users](#users)
+   - [Notes](#notes)
+   - [Categories](#categories)
+   - [Tags](#tags)
+   - [Attachments](#attachments)
+   - [Notebooks](#notebooks)
+   - [Trash](#trash)
+   - [Sharing](#sharing)
+   - [Permissions](#permissions)
+5. [Database E/R Design](#database-er-design)
+6. [Links](#links)
 
-1. **Smart Note Taking Application**
+---
 
-Digital platform that allows users to create, manage, and organize text-based notes. It provides users with the ability to create, edit, categorize, and search for notes, making it easy to capture and retrieve information efficiently.
+## Introduction
 
-----
+**xNote** is a smart note-taking application that provides a digital platform for users to create, manage, and organize text-based notes. It enables users to efficiently capture, edit, categorize, and search for notes.
 
-**2. Features:**
+---
 
-- User Registration and Login:
-  - Users can create accounts and log in securely.
-- Create and Edit Notes:
-  - Users can create new text-based notes.
-  - Notes can be edited and updated as needed.
-- Note Organization:
-  - Users can organize their notes into notebooks or folders.
-  - Notes can have tags for easy categorization.
-- Attachments:
-  - Users can attach files (e.g., images, documents) to their notes.
-- Trash and Recovery:
-  - Deleted notes are moved to the trash and can be recovered.
-- Sharing:
-  - Users can share notes with others.
-  - Collaborative note editing and commenting.
+## Features
 
-----
+- **User Registration and Login**\
+  Secure account creation and login.
+- **Create and Edit Notes**\
+  Ability to create, edit, and update text-based notes.
+- **Note Organization**\
+  Organize notes into notebooks or folders with tags for better categorization.
+- **Attachments**\
+  Attach files (e.g., images, documents) to notes.
+- **Trash and Recovery**\
+  Deleted notes are moved to trash and can be recovered.
+- **Sharing**\
+  Share notes with others, including collaborative editing and commenting.
 
-**3. Installation**
+---
 
-To install the xNote application backend service, follow these steps:
+## Installation
+
+To install the xNote application backend service:
 
 1. Clone the repository:
    ```bash
@@ -43,131 +55,79 @@ To install the xNote application backend service, follow these steps:
    ```bash
    cd xNote-server
    ```
-3. Install the dependencies:
+3. Install dependencies:
    ```bash
    yarn
    ```
-
-4. Set up the environment variables by creating a `.env` file and adding the necessary configurations from `.env.example`
-
-5. Start the server:
+4. Set up environment variables by creating a `.env` file using configurations from `.env.example`.
+5. Seed the database using the provided SQL file:
    ```bash
-	yarn dev
+   	src/database/qridwan_xnote.sql
    ```
-------
+6. Start the server:
+   ```bash
+   yarn dev
+   ```
+   ```bash
+   yarn dev
+   ```
 
-**4. Data Requirements:**
+---
 
-**Users:**
+## Data Requirements
 
-- User ID (Primary Key)
-- Username
-- Email
-- Password
+### Users
 
-Example:
+| userID (PK) | username | email                                       | password  |
+| ----------- | -------- | ------------------------------------------- | --------- |
+| 101         | ridwan   | [mail@qridwan.com](mailto:mail@qridwan.com) | ridwan123 |
+| 102         | asad     | [mail@asad.com](mailto:mail@asad.com)       | asad123   |
 
-| userID (PK) | username | email            | password  |
-| ----------- | -------- | ---------------- | --------- |
-| 101         | ridwan   | mail@qridwan.com | ridwan123 |
-| 102         | asad     | mail@asad.com    | asad123   |
-
-**Notes:**
-
-- Note ID (Primary Key)
-- User ID (Foreign Key)
-- Note Title
-- Note Content
-- Creation Timestamp
-- Update Timestamp
-
-Example:
+### Notes
 
 | noteID (PK) | userID (FK) | note_title | content  | created_at | updated_at |
 | ----------- | ----------- | ---------- | -------- | ---------- | ---------- |
 | 1           | 101         | title 1    | content1 | timezone   | timezone   |
-| 2           | 101         | title 2    | content2 | timezone   | timezone   |
-| 3           | 102         | title 3    | content3 | timezone   | timezone   |
 
-**Categories:**
-
-- Category ID (Primary Key)
-- User ID (Foreign Key)
-- Category Name
-
-Example data for the "Categories" table:
+### Categories
 
 | categoryID (PK) | userID (FK) | category_name |
 | --------------- | ----------- | ------------- |
 | 1               | 101         | Work          |
 | 2               | 101         | Personal      |
 
-**Tags:**
-
-- Tag ID (Primary Key)
-- User ID (Foreign Key)
-- Tag Name
-
-Example data for the "Tags" table:
+### Tags
 
 | tagID (PK) | userID (FK) | tag_name  |
 | ---------- | ----------- | --------- |
 | 1          | 101         | Important |
 | 2          | 101         | Travel    |
 
-**Attachments:**
+### Attachments
 
-- Attachment ID (Primary Key)
-- Note ID (Foreign Key)
-- Attachment File Name
-- Attachment File Type
-- Attachment File Path
-
-| attID (PK) | noteID (FK) | att_filename | att_fitetype | att_file_path  |
+| attID (PK) | noteID (FK) | att_filename | att_filetype | att_file_path  |
 | ---------- | ----------- | ------------ | ------------ | -------------- |
 | 1          | 1           | note1        | png          | work/note1.png |
-|            |             |              |              |                |
 
-**Notebooks:**
-
-- Notebook ID (Primary Key)
-- User ID (Foreign Key)
-- Notebook Name
-- note id
+### Notebooks
 
 | notebookID | userID | notebook_name | note_id |
 | ---------- | ------ | ------------- | ------- |
 | 1          | 101    | book1         | 2       |
-|            |        |               |         |
 
-**Trash:**
+### Trash
 
-- Trash ID (Primary Key)
-- User ID (Foreign Key)
-- Deleted Note ID (Foreign Key)
-- Deletion Timestamp
+| trashID (PK) | userID (FK) | noteID (FK) | timestamp  |
+| ------------ | ----------- | ----------- | ---------- |
+| 1            | 101         | 2           | 12/08/2023 |
 
-| trashID (PK) | userID (FK | noteID (FK) | timestamp   |
-| ------------ | ---------- | ----------- | ----------- |
-| 1            | 101        | 2           | 12/08/2023… |
-|              |            |             |             |
-
-**Sharing:**
-
-- Sharing ID (Primary Key)
-- Note ID (Foreign Key)
-- Shared User ID (Foreign Key)
-- Sharing Permissions
+### Sharing
 
 | sharingID (PK) | noteID (FK) | sharedUserID (FK) | permissionID (FK) |
 | -------------- | ----------- | ----------------- | ----------------- |
-|                |             |                   |                   |
 | abc01          | 2           | 101               | 1                 |
 
-**Permission:**
-
-- permission ID (Primary key)
-- permission name
+### Permissions
 
 | permissionID (PK) | permission_name |
 | ----------------- | --------------- |
@@ -175,38 +135,25 @@ Example data for the "Tags" table:
 | 2                 | view            |
 | 3                 | comment         |
 
-**D. E/R Design for the Database:**
+---
 
-Here's a simplified E/R diagram for the Note-Taking Application:
+## Database E/R Design
 
 - **Entities:**
-  1. User
-  2. Note
-  3. Category
-  4. Tag
-  5. Attachment
-  6. Notebook
-  7. Trash
-  8. Sharing
-  9. Permission
+  - User, Note, Category, Tag, Attachment, Notebook, Trash, Sharing, Permission
+- **Relationships:**
+  1. User (1) ------< Note (Many)
+  2. User (Many) ------< Category_Note >------ (Many) Category
+  3. User (Many) ------< Tag_Note >------ (Many) Tag
+  4. Note (1) ------< Attachment (Many)
+  5. User (Many) ------< Notebook_Note >------ (Many) Notebook
+  6. User (1) ------< Trash (Many) ------< Note (Many)
+  7. User (one) ------< Sharing >------ (Many) User
+  8. Note (Many) >------ permission (One)
 
-**Relationships:**
+---
 
-1. User creates Note (One-to-Many)
-   - User (1) ------< Note (Many)
-2. User organizes Note into Category (Many-to-Many)
-   - User (Many) ------< Category_Note >------ (Many) Category
-3. User assigns Tag to Note (Many-to-Many)
-   - User (Many) ------< Tag_Note >------ (Many) Tag
-4. Note contains Attachment (One-to-Many)
-   - Note (1) ------< Attachment (Many)
-5. User organizes Note into Notebook (Many-to-Many)
-   - User (Many) ------< Notebook_Note >------ (Many) Notebook
-6. User deletes Note to Trash (One-to-Many)
-   - User (1) ------< Trash (Many) ------< Note (Many)
-7. User shares Note with other User (Many-to-Many)
-   - User (one) ------< Sharing >------ (Many) User
-8. Sharable note only have one permission (Many-to-One)
-   - Note (Many) >------ permission (One)
+## Links
 
-<img src="./__support__/xNote.jpg" alt="DATABASE" width="100%" />
+- [**API Documentation**](https://documenter.getpostman.com/view/15074292/2s9YXfcimY#22177e0b-79c1-499f-ad21-a4e7deb0b6cf)
+<!-- - [**LIVE Application**](https://xnote.qridwan.com) -->
